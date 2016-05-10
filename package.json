@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node -r babel-register index.js",
     "build": "cross-env NODE_ENV=production node -r babel-register index.js",
-    "deploy": "surge --project ./build --domain alessandro.arnodo.net"
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "surge --project ./build --domain alessandro.arnodo.net",
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Alessandro Arnodo <alessandro@arnodo.net> (http://alessandro.arnodo.net)",
   "license": "MIT",
