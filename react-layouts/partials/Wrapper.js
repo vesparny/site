@@ -18,8 +18,8 @@ const Wrapper = (props) => {
         auto
         role='main'>
         <Box style={{
-          maxWidth: '710px',
-          minWidth: '710px'
+          width: '90%',
+          maxWidth: '750px'
         }}>
           {props.children}
         </Box>
