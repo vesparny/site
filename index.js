@@ -130,6 +130,9 @@ m.use(assets({
 
 m.build((err, files) => {
   if (err) {
+    if (isProd) {
+      process.exit(1)
+    }
     throw err
   }
   console.log('\nCompilation succeeded!')
@@ -138,6 +141,13 @@ m.build((err, files) => {
   }
 })
 
+// add title and site desc like before
+// intercom
+// responsive fonts
+// hide A
+// maybe an image in header
+// david dm
+// write some readme
 // http://brage.switchbit.io/
 // add pagination links
 // logo with sketch and save result

@@ -38,7 +38,7 @@ module.exports = {
       loader: ExtractTextPlugin.extract('style', 'css')
     }, {
       test: /\.ttf$/,
-      loader: 'file?name=public/fonts/[name].[ext]'
+      loader: 'file?[name].[ext]'
     }]
   }
 }
