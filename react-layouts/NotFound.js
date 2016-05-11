@@ -2,11 +2,12 @@ import React from 'react'
 import { Box } from 'reflexbox'
 import Wrapper from './partials/Wrapper'
 
-const Page = (props) => {
+const NotFound = (props) => {
   return (
     <Wrapper {...props}>
       <Box mt={3}>
         <Box
+          style={{textAlign: 'center'}}
           is='article'
           className='markdown-body'
           dangerouslySetInnerHTML={{ __html: props.content }} />
@@ -15,4 +16,4 @@ const Page = (props) => {
   )
 }
 
-export default Page
+export default NotFound

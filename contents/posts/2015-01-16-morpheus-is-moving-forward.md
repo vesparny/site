@@ -3,11 +3,12 @@ author: Alessandro Arnodo
 email: alessandro@arnodo.net
 tags:
 - Morpheus
+- JavaScript
 permalink: morpheus-is-moving-forward
 title: Morpheus is moving forward
 description: Morpheus is moving forward
 date: 2015-01-16 14:05:31
-template: Post
+layout: Post
 ---
 
 The last week has been very exciting for me.

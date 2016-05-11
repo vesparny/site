@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex, Box } from 'reflexbox'
-import { HeadingLink, Fixed, Avatar, Space } from 'rebass'
+import { Fixed, Avatar, Space } from 'rebass'
+import { FaFeed } from 'react-icons/lib/fa'
 
 const Header = (props) => {
   return (
@@ -8,26 +9,35 @@ const Header = (props) => {
       is='header'
       justify='flex-end'
       align='center'
-      px={4}
       style={{
-        height: '60px'
+        padding: '2rem 3rem',
+        height: '100px'
       }}>
       <Fixed style={{
-        top: '10px',
-        left: '10px'
+        top: '20px',
+        left: '20px'
       }}>
-        <Avatar
-          size={50}
-          src='https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=50' />
+        <a href={props.site.url}>
+          <Avatar
+            size={50}
+            style={{
+              backgroundColor: 'transparent'
+            }}
+            src='/logo.png' />
+        </a>
       </Fixed>
       <Box>
-        <HeadingLink href='/about' style={{display: 'inline-block'}}>
-          About
-        </HeadingLink>
+        <h3 style={{display: 'inline-block'}}>
+          <a href='/about'>About</a>
+        </h3>
         <Space x={2} />
-        <HeadingLink href='/projects' style={{display: 'inline-block'}}>
-          Projects
-        </HeadingLink>
+        <h3 style={{display: 'inline-block'}}>
+          <a href='/projects'>Projects</a>
+        </h3>
+        <Space x={2} />
+        <a href='/feed.xml' style={{fontSize: '3rem'}} title='subscribe' className='tomato'>
+          <FaFeed />
+        </a>
       </Box>
     </Flex>
   )

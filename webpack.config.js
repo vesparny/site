@@ -5,7 +5,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    path.join(__dirname, 'main.js')
+    path.join(__dirname, 'react-layouts/main.js')
   ],
   output: {
     path: path.join(__dirname, 'build/dist'),
@@ -27,6 +27,9 @@ module.exports = {
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract('style', 'css')
+    }, {
+      test: /\.ttf$/,
+      loader: 'file?name=public/fonts/[name].[ext]'
     }]
   }
 }

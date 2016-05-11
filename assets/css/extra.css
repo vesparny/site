@@ -1,0 +1,36 @@
+a.tomato {
+  color: #FF6347
+}
+
+a.tomato:hover {
+    color: #ff2f0a;
+}
+
+.markdown-body a {
+  font-weight: bold;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.Intro a.tag {
+  font-weight: bold;
+}
+
+.Intro a.tag:hover {
+  text-decoration: underline;
+}
+
+.Intro a.title {
+  color: #4A4A4A;
+}
+
+.Intro a.title:hover {
+  color: #2E2E2E;
+}
+
+.Intro a.more {
+  padding: 1rem 0 0 0;
+  display: block;
+}

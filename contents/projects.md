@@ -1,9 +1,8 @@
 ---
-type: page
-slug: projects
 title: Projects
 description: My projects
-
+permalink: projects
+layout: Page
 ---
 
 # Projects

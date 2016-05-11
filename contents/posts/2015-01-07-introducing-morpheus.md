@@ -3,12 +3,12 @@ author: Alessandro Arnodo
 email: alessandro@arnodo.net
 tags:
 - Morpheus
-- ca
+- JavaScript
 permalink: introducing-morpheus
 title: Introducing morpheus
 date: 2015-01-07 15:00:00
 description : A gentle introduction to Morpheus, the very first isomorphic web publishing platform
-template: Post
+layout: Post
 ---
 
 **UPDATE: See the features section for last added functionalities.**

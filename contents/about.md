@@ -1,7 +1,8 @@
 ---
 title: About
 description: About me
-permalink: '/about/'
+permalink: about
+layout: Page
 ---
 
 # About

@@ -19,17 +19,38 @@ const plugin = function reactTpls (options) {
         options.layoutsPath
       ))).default
       const Component = template[files[file].layout || options.defaultLayout]
-
+      const initialState = {
+        content: files[file].contents.toString(),
+        site: metadata.site,
+        title: files[file].title,
+        path: files[file].path,
+        tags: files[file].tags,
+        author: file.author,
+        description: files[file].description,
+        date: files[file].date
+      }
+      if (files[file].pagination) {
+        initialState['pagination'] = {
+          files: files[file].pagination.files.map((file) => {
+            return {
+              date: file.date,
+              path: file.path,
+              title: file.title,
+              excerpt: file.excerpt,
+              tags: file.tags,
+              author: file.author
+            }
+          })
+        }
+      }
       const rootMarkup = ReactDOMServer[options.reactRender](
-        <Component
-          body={files[file].contents.toString()}
-          {...files[file]}
-          {...metadata} />
+        <Component {...initialState} />
       )
       try {
         files[file].contents = new Buffer(
           template.layout({
-            rootMarkup
+            rootMarkup,
+            initialState
           })
         )
       } catch (err) {
