@@ -77,7 +77,7 @@ Metalsmith(__dirname)
   }))
   .use(feed({
     collection: 'posts',
-    destination: 'rss/index.html'
+    destination: 'feed.xml'
   }))
   .use(assets({
     source: './assets',
