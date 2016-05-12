@@ -8,7 +8,7 @@ import Excerpt from './partials/Excerpt'
 class Archive extends Component {
   render () {
     return (
-      <Wrapper {...this.props}>
+      <Wrapper {...this.props} isArchive>
         <Box mt={3}>
           {this.props.pagination.files.map((file, index) => {
             return (

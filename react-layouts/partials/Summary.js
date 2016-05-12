@@ -1,13 +1,15 @@
 import React from 'react'
 import moment from 'moment'
 import { Avatar, Space } from 'rebass'
+import md5 from 'md5'
+
 const Summary = (props) => {
   return (
     <div>
       <Avatar
         style={{float: 'left'}}
         size={24}
-        src='https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=50' />
+        src={`https://s.gravatar.com/avatar/${md5('alessandro@arnodo.net')}?s=24`} />
       <Space />
       <span>{props.author}</span>
       {props.tags.length && <span> on </span>}
