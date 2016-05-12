@@ -12,8 +12,9 @@ const Footer = (props) => {
       is='footer'
       align='center'
       column
-      mt={3}
-      p={3}>
+      style={{
+        marginTop: '3rem'
+      }}>
       <Box>
         Alessandro Arnodo © {new Date().getFullYear()}
       </Box>

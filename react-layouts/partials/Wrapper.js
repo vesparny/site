@@ -52,7 +52,10 @@ const Wrapper = (props) => {
         align='center'
         column
         auto
-        role='main'>
+        role='main'
+        style={{
+          paddingTop: '3rem'
+        }}>
         <Box style={{
           width: '90%',
           maxWidth: '750px'
