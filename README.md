@@ -1,14 +1,12 @@
 # My personal website
 
-[https://alessandro.arnodo.net](https://alessandro.arnodo.net)
-
-
-[![Build Status](https://travis-ci.org/vesparny/alessandro.arnodo.net.svg)](https://travis-ci.org/vesparny/alessandro.arnodo.net)
-[![codecov.io](https://codecov.io/github/vesparny/alessandro.arnodo.net/coverage.svg?branch=master)](https://codecov.io/github/vesparny/alessandro.arnodo.net?branch=master)
-[![Dependency status](https://david-dm.org/vesparny/alessandro.arnodo.net/status.svg)](https://david-dm.org/vesparny/alessandro.arnodo.net "Dependency status")
-[![Dev dependency status](https://david-dm.org/vesparny/alessandro.arnodo.net/dev-status.svg)](https://david-dm.org/vesparny/alessandro.arnodo.net#info=devDependencies "Dev dependency status")
+[![Build Status](https://travis-ci.org/vesparny/react-kickstart.svg)](https://travis-ci.org/vesparny/react-kickstart)
+[![Dependency status](https://david-dm.org/vesparny/react-kickstart/status.svg)](https://david-dm.org/vesparny/react-kickstart "Dependency status")
+[![Dev dependency status](https://david-dm.org/vesparny/react-kickstart/dev-status.svg)](https://david-dm.org/vesparny/react-kickstart#info=devDependencies "Dev dependency status")
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+[https://alessandro.arnodo.net](https://alessandro.arnodo.net)
 
 ## This is a static-generated website leveraging
 
