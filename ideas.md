@@ -6,3 +6,4 @@
 * refactor react stuff
 * render react client side
 * alternative to pingdom
+* github deploy keys

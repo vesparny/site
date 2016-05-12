@@ -21,7 +21,7 @@ const Header = (props) => {
         justify='center'
         style={{
           backgroundImage: `url(${getAbsoluteURL('/images/front.jpg')})`,
-          height: !props.isArchive ? '62px' : '250px',
+          height: !props.isArchive ? '62px' : '400px',
           width: '100%',
           backgroundPosition: 'center center',
           backgroundSize: 'cover'
