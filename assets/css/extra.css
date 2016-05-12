@@ -39,10 +39,12 @@ a.tomato:hover {
   letter-spacing: 0.01rem;
 }
 .logo {
-  display: none;
+  top: 10px;
+  left: 10px;
+  position: absolute;
 }
 @media (min-width: 52em) {
   .logo {
-    display: block;
+    position:fixed;
   }
 }

@@ -32,11 +32,7 @@ const Header = (props) => {
             <h2 className='desc'>{props.site.siteDescription}</h2>
           </div>
         }
-        <div className='logo' style={{
-          top: '10px',
-          left: '10px',
-          position: 'fixed'
-        }}>
+        <div className='logo'>
           <a href={props.site.url}>
             <Avatar
               size={50}
