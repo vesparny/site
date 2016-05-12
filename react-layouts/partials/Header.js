@@ -48,7 +48,7 @@ const Header = (props) => {
           style={{
             top: 0,
             right: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             position: 'absolute',
             lineHeight: '4rem',
             width: '100%',
