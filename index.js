@@ -140,25 +140,3 @@ m.build((err, files) => {
     process.exit(0)
   }
 })
-
-// add title and site desc like before
-// intercom
-// responsive fonts
-// hide A
-// maybe an image in header
-// david dm
-// write some readme
-// http://brage.switchbit.io/
-// add pagination links
-// logo with sketch and save result
-// author box
-// https://github.com/dbushell/dbushell-com
-// ponyfoo
-// https://github.com/davidxmoody/davidxmoody.github.io
-// keen
-// // fix hardcoded gravatar
-// disqus
-// responsive fonts
-// refactor react stuff
-// some readme with daviddm
-// favicon tipo zack
