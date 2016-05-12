@@ -21,7 +21,7 @@ const Header = (props) => {
         justify='center'
         style={{
           backgroundImage: `url(${getAbsoluteURL('/images/front.jpg')})`,
-          height: !props.isArchive ? '62px' : '400px',
+          height: !props.isArchive ? '65px' : '400px',
           width: '100%',
           backgroundPosition: 'center center',
           backgroundSize: 'cover'
@@ -42,24 +42,31 @@ const Header = (props) => {
               src={getAbsoluteURL('logo.png')} />
           </a>
         </div>
-        <Box style={{
-          position: 'absolute',
-          top: '10px',
-          right: '10px',
-          lineHeight: '4rem'
-        }}>
-          <h3 style={{display: 'inline-block'}}>
+        <Flex
+          align='center'
+          justify='flex-end'
+          style={{
+            top: 0,
+            right: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            position: 'absolute',
+            lineHeight: '4rem',
+            width: '100%',
+            'paddingRight': '20px',
+            height: '65px'
+          }}>
+          <h3 style={{display: 'inline-block', 'margin': 0}}>
             <a href={getAbsoluteURL('about')} className='nav'>About</a>
           </h3>
           <Space x={2} />
-          <h3 style={{display: 'inline-block'}}>
+          <h3 style={{display: 'inline-block', 'margin': 0}}>
             <a href={getAbsoluteURL('projects')} className='nav'>Projects</a>
           </h3>
           <Space x={2} />
           <a href={getAbsoluteURL('feed.xml')} style={{fontSize: '3rem'}} title='subscribe' className='tomato'>
             <FaFeed />
           </a>
-        </Box>
+        </Flex>
       </Flex>
     </Box>
   )

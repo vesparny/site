@@ -26,7 +26,21 @@ a.tomato:hover {
   padding: 1rem 0 0 0;
   display: block;
 }
-
+a.nav {
+  color: #ddd;
+  padding: 0.3rem 1rem;
+  font-size: 1.7rem;
+}
+a.nav:hover {
+  color: #fff;
+}
+@media (min-width: 52em) {
+  a.nav {
+    color: #ddd;
+    padding: 0.3rem 1rem;
+    font-size: 2.4rem;
+  }
+}
 .title {
   color: #FFF;
 }
@@ -39,9 +53,15 @@ a.tomato:hover {
   letter-spacing: 0.01rem;
 }
 .logo {
+  z-index: 1000;
   top: 10px;
   left: 10px;
   position: absolute;
+}
+.logo :hover{
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  transition: all 0.4s ease-in-out 0s;
 }
 @media (min-width: 52em) {
   .logo {
