@@ -7,7 +7,7 @@
     "start": "node -r babel-register index.js",
     "start:build": "httpster -p 3000 -d build",
     "build": "cross-env NODE_ENV=production node -r babel-register index.js",
-    "deploy": "surge --project ./build --domain alessandro.arnodo.net",
+    "deploy": "cp CNAME build && cd build && git init && git commit --allow-empty -m 'update site' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'deploy site' && git push git@github.com:vesparny/alessandro.arnodo.net gh-pages --force",
     "test": "echo \"Error: no test specified\"",
     "lint": "standard"
   },
@@ -52,9 +52,10 @@
     "standard": "7.0.1",
     "stats-webpack-plugin": "0.3.1",
     "style-loader": "0.13.1",
-    "surge": "0.18.0",
     "webpack": "1.13.0",
     "webpack-dev-server": "1.14.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "file-loader": "0.8.5"
+  }
 }

@@ -25,7 +25,7 @@ const plugin = function reactTpls (options) {
         title: files[file].title,
         path: files[file].path,
         tags: files[file].tags,
-        author: file.author,
+        author: files[file].author,
         description: files[file].description,
         date: files[file].date
       }

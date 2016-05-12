@@ -10,4 +10,4 @@ node_js:
 before_script:
   - npm prune
 after_success:
-  # - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run  build && npm run deploy'
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run  build && npm run deploy'

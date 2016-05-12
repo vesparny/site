@@ -3,17 +3,18 @@ import Post from './Post'
 import Page from './Page'
 import Archive from './Archive'
 import NotFound from './NotFound'
+import { getAbsoluteURL } from './utils'
 
 const layout = ({ rootMarkup, initialState }) => {
   const head = Helmet.rewind()
   let bundle = {
-    js: '/dist/bundle.js',
-    css: '/dist/main.css'
+    js: getAbsoluteURL('dist/bundle.js'),
+    css: getAbsoluteURL('dist/main.css')
   }
   if (process.env.NODE_ENV === 'production') {
     const webpackBuildStats = require('../build/dist/webpack.stats.json')
-    bundle.js = `/dist/main-${webpackBuildStats.hash}.min.js`
-    bundle.css = `/dist/main-${webpackBuildStats.hash}.min.css`
+    bundle.js = getAbsoluteURL(`dist/main-${webpackBuildStats.hash}.min.js`)
+    bundle.css = getAbsoluteURL(`dist/main-${webpackBuildStats.hash}.min.css`)
   }
   return `<!doctype html>
       <html ${head.htmlAttributes.toString()}>
