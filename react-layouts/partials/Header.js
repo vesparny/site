@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Box } from 'reflexbox'
 import { Avatar } from 'rebass'
-import { FaFeed } from 'react-icons/lib/fa'
+import FaFeed from 'react-icons/lib/fa/feed'
 import { getAbsoluteURL } from '../utils'
 
 const Header = (props) => {

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Flex, Box } from 'reflexbox'
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/lib/fa'
+import FaLinkedin from 'react-icons/lib/fa/linkedin'
+import FaTwitter from 'react-icons/lib/fa/twitter'
+import FaGithub from 'react-icons/lib/fa/github'
 
 const iconStyle = {
   display: 'inline-block',

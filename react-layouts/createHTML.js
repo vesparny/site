@@ -1,11 +1,7 @@
 import Helmet from 'react-helmet'
-import Post from './Post'
-import Page from './Page'
-import Archive from './Archive'
-import NotFound from './NotFound'
 import { getAbsoluteURL } from './utils'
 
-const layout = ({ rootMarkup, initialState }) => {
+const createHTML = ({ rootMarkup, initialState }) => {
   const head = Helmet.rewind()
   let bundle = {
     js: getAbsoluteURL('dist/bundle.js'),
@@ -22,23 +18,15 @@ const layout = ({ rootMarkup, initialState }) => {
            ${head.meta.toString()}
            ${head.title.toString()}
            ${head.link.toString()}
-          <link href='${bundle.css}' rel='stylesheet' />
+          <link href="${bundle.css}" rel="stylesheet" />
         </head>
         <body>
-          <div id='root'>${rootMarkup}</div>
-          <script>
-            window.BOOTSTRAP_CLIENT_STATE = ${JSON.stringify(initialState)}
-          </script>
+          <div id="root">${rootMarkup}</div>
+          <script>window.BOOTSTRAP_CLIENT_STATE = ${JSON.stringify(initialState)}</script>
           <script src="${bundle.js}" type="text/javascript"></script>
         </body>
       </html>
     `
 }
 
-export default {
-  layout,
-  Page,
-  Post,
-  Archive,
-  NotFound
-}
+export default createHTML

@@ -8,7 +8,7 @@ import excerpts from 'metalsmith-better-excerpts'
 import tags from 'metalsmith-tags'
 import sitemap from 'metalsmith-sitemap'
 import feed from 'metalsmith-feed'
-import htmlMin from 'metalsmith-html-minifier'
+// import htmlMin from 'metalsmith-html-minifier'
 import watch from 'metalsmith-watch'
 import cheerio from 'cheerio'
 import markdown from './plugins/markdown'
@@ -120,7 +120,7 @@ if (isProd) {
     feedPath: options.feedPath
   }))
 
-  m.use(htmlMin())
+  // m.use(htmlMin())
 }
 
 m.use(assets({

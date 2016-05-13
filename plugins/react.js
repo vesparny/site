@@ -15,10 +15,11 @@ const plugin = function reactTpls (options) {
     const metadata = metalsmith.metadata()
     const matched = multimatch(Object.keys(files), options.pattern) || []
     matched.forEach((file) => {
-      const template = require(metalsmith.path(path.join(
-        options.layoutsPath
+      const layouts = require(metalsmith.path(path.join(
+        options.layoutsPath,
+        'layouts'
       ))).default
-      const Component = template[files[file].layout || options.defaultLayout]
+      const Component = layouts[files[file].layout || options.defaultLayout]
       const initialState = {
         content: files[file].contents.toString(),
         site: metadata.site,
@@ -49,8 +50,12 @@ const plugin = function reactTpls (options) {
         <Component {...initialState} />
       )
       try {
+        const createHTML = require(metalsmith.path(path.join(
+          options.layoutsPath,
+          'createHTML'
+        ))).default
         files[file].contents = new Buffer(
-          template.layout({
+          createHTML({
             rootMarkup,
             initialState
           })
