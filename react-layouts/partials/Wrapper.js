@@ -59,7 +59,7 @@ const Wrapper = (props) => {
         }}>
         <Box style={{
           width: '90%',
-          maxWidth: '750px'
+          maxWidth: '710px'
         }}>
           {props.children}
         </Box>
