@@ -3,6 +3,7 @@ import { Flex, Box } from 'reflexbox'
 import Helmet from 'react-helmet'
 import Footer from './Footer'
 import Header from './Header'
+import KeenIO from './KeenIO'
 
 const Wrapper = (props) => {
   return (
@@ -64,7 +65,8 @@ const Wrapper = (props) => {
         </Box>
       </Flex>
       <Footer />
-    </Flex>
+      <KeenIO {...props} />
+    </Flex >
   )
 }
 

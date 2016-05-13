@@ -1,7 +1,6 @@
 * add pagination links
 * create a better logo with sketch
 * author box
-* keen
 * disqus
 * refactor react stuff
 * alternative to pingdom
