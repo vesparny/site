@@ -1,7 +1,9 @@
 import React from 'react'
 import { Box } from 'reflexbox'
+import ReactDisqusThread from 'react-disqus-thread'
 import Wrapper from './partials/Wrapper'
 import Summary from './partials/Summary'
+import { getAbsoluteURL } from './utils'
 
 const Post = (props) => {
   return (
@@ -34,6 +36,11 @@ const Post = (props) => {
           className='markdown-body'
           dangerouslySetInnerHTML={{ __html: props.content }} />
       </Box>
+      <ReactDisqusThread
+        shortname={props.site.disqusSN}
+        identifier={props.permalink}
+        title={props.title}
+        url={getAbsoluteURL(props.path)} />
     </Wrapper>
   )
 }

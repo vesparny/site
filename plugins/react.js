@@ -29,7 +29,8 @@ const plugin = function reactTpls (options) {
         author: files[file].author,
         description: files[file].description,
         date: files[file].date,
-        layout: files[file].layout || options.defaultLayout
+        layout: files[file].layout || options.defaultLayout,
+        permalink: files[file].permalink
       }
       if (files[file].pagination) {
         initialState['pagination'] = {
@@ -41,7 +42,8 @@ const plugin = function reactTpls (options) {
               excerpt: file.excerpt,
               tags: file.tags,
               author: file.author,
-              layout: file.layout || options.defaultLayout
+              layout: file.layout || options.defaultLayout,
+              permalink: file.permalink
             }
           })
         }
