@@ -58,13 +58,29 @@ a.nav:hover {
   left: 10px;
   position: absolute;
 }
-.logo :hover{
+.logo:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
   transition: all 0.4s ease-in-out 0s;
 }
 @media (min-width: 52em) {
   .logo {
-    position:fixed;
+    position: fixed;
+  }
+}
+.Summary .date {
+  display: none;
+}
+
+.Summary {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 40em) {
+  .Summary {
+    font-size: 1.7rem;
+  }
+  .Summary .date {
+    display: inline-block;
   }
 }

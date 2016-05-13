@@ -5,7 +5,7 @@ import md5 from 'md5'
 
 const Summary = (props) => {
   return (
-    <div>
+    <div className='Summary'>
       <Avatar
         style={{float: 'left'}}
         size={24}
@@ -19,12 +19,14 @@ const Summary = (props) => {
           ? <span key={index}>{link}</span>
           : <span key={index}>{link}, </span>
       })}
-      <Space />
-      |
-      <Space />
-      <time dateTime={props.date}>
-        {moment(props.date).format('DD MMMM YYYY')}
-      </time>
+      <div className='date'>
+        <Space />
+        |
+        <Space />
+        <time dateTime={props.date}>
+          {moment(props.date).format('DD MMMM YYYY')}
+        </time>
+      </div>
     </div>
   )
 }

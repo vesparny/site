@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Box } from 'reflexbox'
-import { Avatar, Space } from 'rebass'
+import { Avatar } from 'rebass'
 import { FaFeed } from 'react-icons/lib/fa'
 import { getAbsoluteURL } from '../utils'
 
@@ -58,11 +58,9 @@ const Header = (props) => {
           <h3 style={{display: 'inline-block', 'margin': 0}}>
             <a href={getAbsoluteURL('about')} className='nav'>About</a>
           </h3>
-          <Space x={2} />
           <h3 style={{display: 'inline-block', 'margin': 0}}>
             <a href={getAbsoluteURL('projects')} className='nav'>Projects</a>
           </h3>
-          <Space x={2} />
           <a href={getAbsoluteURL('feed.xml')} style={{fontSize: '3rem'}} title='subscribe' className='tomato'>
             <FaFeed />
           </a>
