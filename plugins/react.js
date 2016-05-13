@@ -27,7 +27,8 @@ const plugin = function reactTpls (options) {
         tags: files[file].tags,
         author: files[file].author,
         description: files[file].description,
-        date: files[file].date
+        date: files[file].date,
+        layout: files[file].layout || options.defaultLayout
       }
       if (files[file].pagination) {
         initialState['pagination'] = {
@@ -38,7 +39,8 @@ const plugin = function reactTpls (options) {
               title: file.title,
               excerpt: file.excerpt,
               tags: file.tags,
-              author: file.author
+              author: file.author,
+              layout: file.layout || options.defaultLayout
             }
           })
         }

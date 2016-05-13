@@ -3,7 +3,7 @@ import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'false',
   entry: [
     path.join(__dirname, 'react-layouts/main.js')
   ],
@@ -14,8 +14,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('main.css'),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     })
@@ -23,7 +21,8 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js?$/,
-      loader: 'babel'
+      loader: 'babel',
+      exclude: /node_modules/
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract('style', 'css')

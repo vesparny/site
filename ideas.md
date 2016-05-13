@@ -10,3 +10,4 @@
 * tags page titles
 * animations home titles
 * check online open tags (not working on skype)
+* find a way to serialize Metalsmith files removing functions and circular dependencies

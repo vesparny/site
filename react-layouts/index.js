@@ -25,13 +25,11 @@ const layout = ({ rootMarkup, initialState }) => {
           <link href='${bundle.css}' rel='stylesheet' />
         </head>
         <body>
-          <div id='root'>
-            ${rootMarkup}
-          </div>
+          <div id='root'>${rootMarkup}</div>
           <script>
             window.BOOTSTRAP_CLIENT_STATE = ${JSON.stringify(initialState)}
           </script>
-          <script src='${bundle.js}' />
+          <script src="${bundle.js}" type="text/javascript"></script>
         </body>
       </html>
     `

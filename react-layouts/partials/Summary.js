@@ -23,7 +23,7 @@ const Summary = (props) => {
         <Space />
         |
         <Space />
-        <time dateTime={props.date}>
+        <time dateTime={moment(props.date).format('YYYY-MM-DD')}>
           {moment(props.date).format('DD MMMM YYYY')}
         </time>
       </div>
