@@ -61,4 +61,4 @@ I have a lot of [ideas](https://github.com/vesparny/morpheus/issues), but I've b
 
 If you want to contribute with ideas or code, you are more than welcome!
 
-Should you have any thought, you know how to reach my out, I'm here waiting for wise suggestions.
+Should you have any thoughts, you know how to reach out to me, I'm here waiting for wise suggestions 😀

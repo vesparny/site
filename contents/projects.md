@@ -7,9 +7,9 @@ layout: Page
 
 # Projects
 
-**I really love write code, and playing with new technologies.**
+**I really love writing code, and playing with new technologies.**
 
-Here some stuff I'm working/worked on
+Here some stuff I'm working/worked on.
 
 
 ### [Morpheus](https://github.com/vesparny/morpheus)

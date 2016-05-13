@@ -14,11 +14,11 @@ layout: Post
 **UPDATE: See the features section for last added functionalities.**
 ___
 
-The world have plenty of cms, blogging platform and web publishing platform, so why another one?
+The world have plenty of CMS, blogging platform and web publishing platform, so why another one?
 
 **because Morpheus is the first [isomorphic](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/) open-source web publishing platform, and it's built with react and flux.**
 
-Chekout the source code [here](https://github.com/vesparny/morpheus).
+Checkout the source code [here](https://github.com/vesparny/morpheus).
 
 ### Reasons behind Morpheus
 
