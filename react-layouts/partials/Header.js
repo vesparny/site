@@ -1,10 +1,28 @@
 import React from 'react'
+import Headroom from 'react-headroom'
 import { Flex, Box } from 'reflexbox'
 import { Avatar } from 'rebass'
 import FaFeed from 'react-icons/lib/fa/feed'
 import { getAbsoluteURL } from '../utils'
 
+let headerStyle = {
+  height: '65px',
+  width: '100%',
+  backgroundPosition: 'center center',
+  backgroundSize: 'cover'
+}
+
 const Header = (props) => {
+  if (props.isArchive) {
+    headerStyle = Object.assign(
+      {},
+      headerStyle,
+      {
+        backgroundImage: `url(${getAbsoluteURL('/images/front.jpg')})`,
+        height: '400px'
+      }
+    )
+  }
   return (
     <Box
       className='Header'
@@ -19,13 +37,7 @@ const Header = (props) => {
         column
         align='center'
         justify='center'
-        style={{
-          backgroundImage: `url(${getAbsoluteURL('/images/front.jpg')})`,
-          height: !props.isArchive ? '65px' : '400px',
-          width: '100%',
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover'
-        }}>
+        style={headerStyle}>
         {props.isArchive &&
           <div>
             <h1 className='title'>{props.site.siteTitle}</h1>
@@ -33,7 +45,7 @@ const Header = (props) => {
           </div>
         }
         <div className='logo'>
-          <a href={props.site.url}>
+          <a href={getAbsoluteURL('/')}>
             <Avatar
               size={50}
               style={{
@@ -42,29 +54,35 @@ const Header = (props) => {
               src={getAbsoluteURL('logo.png')} />
           </a>
         </div>
-        <Flex
-          align='center'
-          justify='flex-end'
-          style={{
-            top: 0,
-            right: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            position: 'absolute',
-            lineHeight: '4rem',
-            width: '100%',
-            'paddingRight': '20px',
-            height: '65px'
-          }}>
-          <h3 style={{display: 'inline-block', 'margin': 0}}>
-            <a href={getAbsoluteURL('about')} className='nav'>About</a>
-          </h3>
-          <h3 style={{display: 'inline-block', 'margin': 0}}>
-            <a href={getAbsoluteURL('projects')} className='nav'>Projects</a>
-          </h3>
-          <a href={getAbsoluteURL('feed.xml')} style={{fontSize: '3rem'}} title='subscribe' className='tomato'>
-            <FaFeed />
-          </a>
-        </Flex>
+        <div style={{
+          width: '100%',
+          position: 'absolute',
+          top: 0
+        }}>
+          <Headroom>
+            <Flex
+              align='center'
+              justify='flex-end'
+              style={{
+                background: '#fff',
+                lineHeight: '4rem',
+                width: '100%',
+                'paddingRight': '20px',
+                boxShadow: '0 0 1px rgba(0,0,0,.15)',
+                height: '65px'
+              }}>
+              <h3 style={{display: 'inline-block', 'margin': 0}}>
+                <a href={getAbsoluteURL('about')} className='nav'>About</a>
+              </h3>
+              <h3 style={{display: 'inline-block', 'margin': 0}}>
+                <a href={getAbsoluteURL('projects')} className='nav'>Projects</a>
+              </h3>
+              <a href={getAbsoluteURL('feed.xml')} style={{fontSize: '3rem'}} title='subscribe' className='tomato'>
+                <FaFeed />
+              </a>
+            </Flex>
+          </Headroom>
+        </div>
       </Flex>
     </Box>
   )

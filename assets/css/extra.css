@@ -27,16 +27,11 @@ a.tomato:hover {
   display: block;
 }
 a.nav {
-  color: #ddd;
   padding: 0.3rem 1rem;
   font-size: 1.7rem;
 }
-a.nav:hover {
-  color: #fff;
-}
 @media (min-width: 52em) {
   a.nav {
-    color: #ddd;
     padding: 0.3rem 1rem;
     font-size: 2.4rem;
   }
