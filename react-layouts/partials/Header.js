@@ -27,7 +27,6 @@ const Header = (props) => {
     <Box
       className='Header'
       is='header'
-      align='center'
       style={{
         width: '100%',
         textAlign: 'center'
@@ -35,7 +34,6 @@ const Header = (props) => {
       <Flex
         className='hero'
         column
-        align='center'
         justify='center'
         style={headerStyle}>
         {props.isArchive &&
