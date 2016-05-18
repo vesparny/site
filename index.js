@@ -28,8 +28,7 @@ const options = {
   sitemapPath: 'sitemap.xml',
   twitter: '@vesparny',
   disqusSN: 'arnodo',
-  keenPI: '5735d8ee072719153287a63a',
-  keenWK: 'c3a7906f1d3967985991e777d099930d416d76e554c6224d4fab2476658a8930358795fca899ea30d83919e7eaf348e1b0ac0c6131047788ea6bf6fa838a328618200fa7a120400d9b68cf994a776e3a120d69619427283b0db005334eef5e41'
+  segment: 'hhtYU3GWruJZ1URzM1tjwFV7GmtbT2Yu'
 }
 const m = Metalsmith(__dirname)
 
