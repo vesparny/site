@@ -8,7 +8,7 @@ script:
   - npm run build
 env:
   global:
-    - secure: "V5o3q95paNB2doBfp2U2HXDdg8N6n8mhNcCt9EbBjgHF1M2eXBa/3zxHlaORgcb88NCiVPv+R+8ToapwVD0RiBNwCGYdmm+dKLl+VruDnoPhBt/Z24wF92pf4LKhgW2rw2Q6YR4uFU9dQkFH0ztxaX9CZO1pIXBQ+6WTsO2wKo6usbjZk9aGqIRcRg9gwDMAnJ5o65uZ12yk8lo9PvCQuA93HW3+VpJDjUmZ0pLNKGNOdMAwQdopoSpC4i1bRb9DxhSSU6KicAL9QafPlky1vxJlGVpjsc6+Ope/WcU160LuXRDzQ8OeKB0b+oKUVwADpc6FQLPN9cwhhA5UB9bKHXdkmlp4mj6YKi1D7S9lt7kBXbAbGBvaBAU1zYYO6Gip4a3Pv4WDq/tiPBVI/+PPBNF3VSK6K1Ob/8U1BUqLhzjXrx5On/Qw/PzZOTknyGDcQndjZ4XhWutUX4fKouRonUqw+gvBaI7O42P5WdsEmCk3OgHQ5Q0+JflDC3zRyhrHZOsVagVvM/hC60+zKL5ek4hcSP1c9H51+mlj7pMFcH2aYhzLvLt+6VGNTnX/OIAs7wviNZ2WNsyNLLjzXKS7Zy47FYKo4mODs2wXnME/ueTH1SSPIaZ74QxcOotY+Y+cfzp9H1S6Uo097cjc0OWCODa0TaCGAPMEJaTuPfFr94g="
+    - secure: "LDx/SD0aNItAnai8QNxpyZb9zGP1ekyIpV2OjMSacc8qglbBGO3VY+ld5rJKWtqZ5mL///Ey6dLvFHplYZVjc7yaz0nl9P2EoCNqwMONgpDwXlEoVFppQXMuJIBa7sadPP7U/Dfs6NO6GqY/lwqWaUKQXHXylzwKDevn6xYkMl2EOBNMAOrxQkEUCDeHeGl71Igp7g1fQ/P3sN57jROsMne295ZY2xUoBlDKhIItSzZmeE1EN7MN0kTOqymfb0tKxuklRvC3k2HRtLGV5vRvchR9R61ueAQgdjl53HTfUZ9nRsqlYHpMq4wcgkvV6cdde9x3xSyed4UQ0AudNCkvMR6OX5BRi2M+eFWIxCPoPcX3AQEWlet7PZ6+wBtbhuclb+2Z4c4wz+JhL7fSw2MKZ21bO5mYf5XfG6cDArqCPosL3YHfMUR2iVAvBaQUwDMNftFqb0u1uXRrqBEBHCeUXgxX1+x0X476igTdeKg4yPhNl/JPzwQTmWoU8APWqNs4+ZmA7IeTgqz60lHTyz8sshwQvtQDcNkf98mqYqSWLgVfopqs7S/yFsHGl6ZAFpDnFB8yDuK0AfInvUrDupGTKLe/jZOe8/gnkd25O9A6yhsXE/YV+WcMBx9347QhzPtMmeM9VQdgALtu3elFRpgkgUEcrkc23vbc+i5sHW1MWAs="
 after_success: |
   cp CNAME build
   cd build
@@ -18,4 +18,4 @@ after_success: |
   git config user.email "travis@nodemeatspace.com"
   git add .
   git commit -m "Deployed to Github Pages"
-  git push -f -q https://${GH_TOKEN}@github.com/vesparny/knowledge gh-pages
+  git push -f -q https://${GH_TOKEN}@github.com/vesparny/alessandro.arnodo.net gh-pages
