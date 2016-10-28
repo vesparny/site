@@ -14,7 +14,7 @@ const Summary = (props) => {
       <span>{props.author}</span>
       {props.tags.length && <span> on </span>}
       {props.tags.map((tag, index) => {
-        const link = <a href={`/tag/${tag.toLowerCase()}`} className='tag'>{tag}</a>
+        const link = <a href={`/tag/${tag.slug}`} className='tag'>{tag.name}</a>
         return index === props.tags.length - 1
           ? <span key={index}>{link}</span>
           : <span key={index}>{link}, </span>

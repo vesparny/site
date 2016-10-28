@@ -7,7 +7,6 @@ const Page = (props) => {
     <Wrapper {...props}>
       <Box mt={3}>
         <Box
-          is='article'
           className='markdown-body'
           dangerouslySetInnerHTML={{ __html: props.content }} />
       </Box>

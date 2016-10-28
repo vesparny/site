@@ -26,14 +26,13 @@ const Header = (props) => {
   return (
     <Box
       className='Header'
-      is='header'
       style={{
         width: '100%',
         textAlign: 'center'
       }}>
       <Flex
         className='hero'
-        column
+        flexColumn
         justify='center'
         style={headerStyle}>
         {props.isArchive &&

@@ -8,7 +8,7 @@ import Analytics from './Analytics'
 const Wrapper = (props) => {
   return (
     <Flex
-      column
+      flexColumn
       style={{
         minHeight: '100vh'
       }}>
@@ -49,7 +49,6 @@ const Wrapper = (props) => {
       />
       <Header {...props} />
       <Flex
-        is='div'
         align='center'
         column
         auto

@@ -11,9 +11,8 @@ const iconStyle = {
 const Footer = (props) => {
   return (
     <Flex
-      is='footer'
       align='center'
-      column
+      flexColumn
       style={{
         marginTop: '3rem'
       }}>

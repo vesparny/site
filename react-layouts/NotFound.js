@@ -8,7 +8,6 @@ const NotFound = (props) => {
       <Box mt={3}>
         <Box
           style={{textAlign: 'center'}}
-          is='article'
           className='markdown-body'
           dangerouslySetInnerHTML={{ __html: props.content }} />
       </Box>

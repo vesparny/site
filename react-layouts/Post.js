@@ -10,7 +10,7 @@ const Post = (props) => {
     <Wrapper {...props}>
       <Box
         mt={3}
-        is='article'>
+      >
         <header style={{
           borderBottom: '#E7EEF2 1px solid'
         }}>
@@ -32,7 +32,6 @@ const Post = (props) => {
           style={{
             margin: '4rem 0'
           }}
-          is='section'
           className='markdown-body'
           dangerouslySetInnerHTML={{ __html: props.content }} />
       </Box>

@@ -49,7 +49,7 @@ m.use(webpack({
 if (!isProd) {
   m.use(watch({
     paths: {
-      '${source}/**/*': true,
+      '${source}/**/*': true, // eslint-disable-line
       'react-layouts/**/*': '**/*'
     },
     livereload: !isProd
