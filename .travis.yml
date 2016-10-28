@@ -1,8 +1,21 @@
 language: node_js
+node_js:
+  - "7"
 branches:
   only:
     - master
-node_js:
-  - "7"
-after_success:
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run build && npm run deploy'
+script:
+  - npm run build
+env:
+  global:
+    - secure: "V5o3q95paNB2doBfp2U2HXDdg8N6n8mhNcCt9EbBjgHF1M2eXBa/3zxHlaORgcb88NCiVPv+R+8ToapwVD0RiBNwCGYdmm+dKLl+VruDnoPhBt/Z24wF92pf4LKhgW2rw2Q6YR4uFU9dQkFH0ztxaX9CZO1pIXBQ+6WTsO2wKo6usbjZk9aGqIRcRg9gwDMAnJ5o65uZ12yk8lo9PvCQuA93HW3+VpJDjUmZ0pLNKGNOdMAwQdopoSpC4i1bRb9DxhSSU6KicAL9QafPlky1vxJlGVpjsc6+Ope/WcU160LuXRDzQ8OeKB0b+oKUVwADpc6FQLPN9cwhhA5UB9bKHXdkmlp4mj6YKi1D7S9lt7kBXbAbGBvaBAU1zYYO6Gip4a3Pv4WDq/tiPBVI/+PPBNF3VSK6K1Ob/8U1BUqLhzjXrx5On/Qw/PzZOTknyGDcQndjZ4XhWutUX4fKouRonUqw+gvBaI7O42P5WdsEmCk3OgHQ5Q0+JflDC3zRyhrHZOsVagVvM/hC60+zKL5ek4hcSP1c9H51+mlj7pMFcH2aYhzLvLt+6VGNTnX/OIAs7wviNZ2WNsyNLLjzXKS7Zy47FYKo4mODs2wXnME/ueTH1SSPIaZ74QxcOotY+Y+cfzp9H1S6Uo097cjc0OWCODa0TaCGAPMEJaTuPfFr94g="
+after_success: |
+  cp CNAME build
+  cd build
+  git init
+  git checkout -b gh-pages
+  git config user.name "Travis-CI"
+  git config user.email "travis@nodemeatspace.com"
+  git add .
+  git commit -m "Deployed to Github Pages"
+  git push -f -q https://${GH_TOKEN}@github.com/vesparny/knowledge gh-pages
