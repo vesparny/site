@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - 8
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script: npm test # Here you could also run the build step of your application
+before_deploy: npm install now --no-save # Install Now CLI on Travis
+deploy:
+  - provider: script # Run a custom deployment script which we will define below
+    script: now --docker --public now --token $NOW_TOKEN
+    skip_cleanup: true
+    on:
+      all_branches: true
+      master: false
+  - provider: script
+    script: now --docker --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+    skip_cleanup: true
+    on:
+      master: true
+env:
+  global:
+    - secure: "lVcX7iDScuPyTHRCUysheBz4lNlI/cq/zOVTRJLWAaTdcUmFoBB/MeJH8Twy+Y0p0S9s37xW6+QVUOYJ8GpCENAa+1ZpPvOq+S0mRodfVvfBuxRbKAWpHjFPNVCZkJfej8thybLcJMmQP3iQPK5ZgXyl7aMxTSNO8nDQug6haojv9zebagu/x6w7lAeVf8dDQQg1nnGyhF7FphHsA6dFUmE+JgSCSmKMScNGAg8a2GrLFekJCcM4MOBnk4+DVuCSaY9qmY/YmW3sTHpMITMMTN8QryRi1mhr7dusmVWBuIkuW8cLts4E662YK9ZvljdpPmXLs3FYHNYhCo7seZzawqLUxkIRQlb6/uERdtSCHuJjMx1049sQlncSeBgLBg8ydtHQX4mU1E48QeBg0xo/BTyf4c+GRDeoq1D8OI5xyOOtSi/9a6478Wf2BZ8FeUXFX3Py2AXCZ4l9fxos+Z6PDEBy2MwdAlM6HULKj+8b8OTXvZaqgSneZzxYcpDlKLPOy5qp49uQUpfAiMzleYT3RjRmBPaaTl9ZOKv/+Y6gqGqqV/MWeMHxy0pyktwVZ3k+Ectw+l9dnqVflhIhY+ugrX1diAMO7BjPG1brku61OyTNyIvUmxLYZ0G1jm0r4lBFrD+7nRUfSBjvENY2d76bvsnZz5cFI2oPsy0VnD8UR+s="
