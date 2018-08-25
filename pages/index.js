@@ -1,1 +1,1 @@
-export default () => <div>go travissas go</div>
+export default () => <div>go a go</div>
