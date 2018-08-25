@@ -9,7 +9,7 @@ env:
 after_success: |
   cp CNAME build
   cd build
-  git init
+    script: now --docker --public --token $NOW_TOKEN
     skip_cleanup: true
   git config user.name "Travis-CI"
   git config user.email "travis@nodemeatspace.com"
