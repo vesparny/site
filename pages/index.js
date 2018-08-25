@@ -1,1 +1,1 @@
-export default () => <div claa="dasdas">okokok World.</div>
+export default () => <div>go travis go</div>
