@@ -10,7 +10,7 @@ after_success: |
   cp CNAME build
   cd build
   git init
-  git checkout -b gh-pages
+    skip_cleanup: true
   git config user.name "Travis-CI"
   git config user.email "travis@nodemeatspace.com"
   git add .
