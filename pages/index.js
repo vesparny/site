@@ -1,1 +1,3 @@
-export default () => <div>go a go</div>
+import { Header } from '../components/ui'
+
+export default () => <Header>gaao a go</Header>
