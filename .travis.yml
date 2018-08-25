@@ -16,3 +16,9 @@ after_success: |
   git add .
   git commit -m "Deployed to Github Pages"
   git push -f -q https://${GH_TOKEN}@github.com/vesparny/alessandro.arnodo.net gh-pages
+    skip_cleanup: true
+    on:
+      master: true
+env:
+  global:
+    - secure: "lVcX7iDScuPyTHRCUysheBz4lNlI/cq/zOVTRJLWAaTdcUmFoBB/MeJH8Twy+Y0p0S9s37xW6+QVUOYJ8GpCENAa+1ZpPvOq+S0mRodfVvfBuxRbKAWpHjFPNVCZkJfej8thybLcJMmQP3iQPK5ZgXyl7aMxTSNO8nDQug6haojv9zebagu/x6w7lAeVf8dDQQg1nnGyhF7FphHsA6dFUmE+JgSCSmKMScNGAg8a2GrLFekJCcM4MOBnk4+DVuCSaY9qmY/YmW3sTHpMITMMTN8QryRi1mhr7dusmVWBuIkuW8cLts4E662YK9ZvljdpPmXLs3FYHNYhCo7seZzawqLUxkIRQlb6/uERdtSCHuJjMx1049sQlncSeBgLBg8ydtHQX4mU1E48QeBg0xo/BTyf4c+GRDeoq1D8OI5xyOOtSi/9a6478Wf2BZ8FeUXFX3Py2AXCZ4l9fxos+Z6PDEBy2MwdAlM6HULKj+8b8OTXvZaqgSneZzxYcpDlKLPOy5qp49uQUpfAiMzleYT3RjRmBPaaTl9ZOKv/+Y6
