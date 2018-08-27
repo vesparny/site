@@ -1,10 +1,10 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { extractCritical } from 'emotion-server'
 import { injectGlobal } from 'emotion'
-import normalize from 'normalize.css'
 
 injectGlobal`
-  ${normalize}
+  * { box-sizing: border-box; }
+  body { margin: 0; }
 `
 
 export default class MyDocument extends Document {
