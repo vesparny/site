@@ -3763,6 +3763,10 @@ micro-dev@^3.0.0:
     pretty-error "2.1.1"
     string-length "2.0.0"
 
+micro-redirect@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/micro-redirect/-/micro-redirect-1.0.0.tgz#aef703984f4ee46cfbbbfe2281cacc6f370d669e"
+
 micro-route@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/micro-route/-/micro-route-2.5.0.tgz#4d966b7c9803bbfe085f5e5514389be2d736e5d3"
@@ -4165,6 +4169,10 @@ npmlog@^4.0.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
 
 nth-check@~1.0.1:
   version "1.0.1"

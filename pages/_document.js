@@ -5,6 +5,21 @@ import { injectGlobal } from 'emotion'
 injectGlobal`
   * { box-sizing: border-box; }
   body { margin: 0; }
+  #nprogress {
+    pointer-events: none;
+  }
+  #nprogress .bar {
+    background: tomato;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+  #nprogress .peg {
+    display: none;
+  }
 `
 
 export default class MyDocument extends Document {
