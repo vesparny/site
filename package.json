@@ -4,7 +4,7 @@
   "description": "my personal website",
   "main": "server.js",
   "scripts": {
-    "dev": "micro-dev --watch server.js",
+    "dev": "micro-dev server.js --watch analytics.js --silent",
     "build": "next build",
     "start": "NODE_ENV=production micro",
     "test": "npm run lint",
@@ -18,7 +18,6 @@
     "@mdx-js/mdx": "^0.15.0",
     "@zeit/next-mdx": "^1.1.0",
     "brcast": "^3.0.1",
-    "emotion-theming": "^9.2.6",
     "github-base": "^1.0.0",
     "micro": "^9.3.3",
     "micro-redirect": "^1.0.0",

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Header from '../components/header'
+import { ThemeProvider } from 'styled-components'
 import { version } from '../package.json'
+import theme from '../components/theme'
 
 if (global.document) {
   const info = [
@@ -21,10 +23,12 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <div>
-        <Header />
-        {this.props.children}
-      </div>
+      <ThemeProvider theme={theme}>
+        <div>
+          <Header />
+          {this.props.children}
+        </div>
+      </ThemeProvider>
     )
   }
 }

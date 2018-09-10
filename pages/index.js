@@ -4,8 +4,8 @@ import { Box } from 'rebass'
 
 export default () => (
   <Page>
-    <Box color="red" as={'span'}>
-      ciao
+    <Box fontSize={2} p={2} color="red">
+      ciaoaassss
     </Box>
     <Link href="/writing">
       <a>writing</a>
