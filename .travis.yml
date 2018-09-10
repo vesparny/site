@@ -9,11 +9,10 @@ env:
 after_success: |
   cp CNAME build
   cd build
-    script: now --docker --public --token $NOW_TOKEN
+    script: now --local-config next.arnodo.net.now.json --public --token $NOW_TOKEN && now --local-config next.arnodo.net.now.json alias --token $NOW_TOKEN
     skip_cleanup: true
   git config user.name "Travis-CI"
-  git config user.email "travis@nodemeatspace.com"
-  git add .
+      next: true
   git commit -m "Deployed to Github Pages"
   git push -f -q https://${GH_TOKEN}@github.com/vesparny/alessandro.arnodo.net gh-pages
     skip_cleanup: true

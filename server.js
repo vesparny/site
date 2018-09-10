@@ -1,8 +1,13 @@
+if (process.env.NODE_ENV !== 'production') {
+  process.env.NOW_CONFIG = 'local.now.json'
+  require('now-env')
+}
 const { parse } = require('url')
 const { send } = require('micro')
 const match = require('micro-route/match')
 const redirect = require('micro-redirect')
 const next = require('next')
+const analytics = require('./analytics')()
 
 const dev = process.env.NODE_ENV !== 'production'
 
@@ -10,6 +15,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const isCheck = req => match(req, '/check')
+const isVisit = req => match(req, '/visit')
+
 // https://github.com/snd/url-pattern/issues/24
 const isPost = req => match(req, '/writing/:year/:slug(/)')
 
@@ -37,6 +44,10 @@ async function main(req, res) {
   // routes
   if (isCheck(req)) {
     return send(res, 200)
+  }
+  if (isVisit(req)) {
+    analytics.visit(parsedUrl.query.url)
+    return send(res, 200, { ok: true })
   }
 
   const post = isPost(req)

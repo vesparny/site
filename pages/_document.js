@@ -1,9 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { extractCritical } from 'emotion-server'
-import { injectGlobal } from 'emotion'
+import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
 
-injectGlobal`
-  * { box-sizing: border-box; }
+const GlobalStyle = createGlobalStyle`
+* { box-sizing: border-box; }
   body { margin: 0; }
   #nprogress {
     pointer-events: none;
@@ -24,17 +23,12 @@ injectGlobal`
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
-    const page = renderPage()
-    const styles = extractCritical(page.html)
-    return { ...page, ...styles }
-  }
-
-  constructor(props) {
-    super(props)
-    const { __NEXT_DATA__, ids } = props
-    if (ids) {
-      __NEXT_DATA__.ids = ids
-    }
+    const sheet = new ServerStyleSheet()
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    )
+    const styleTags = sheet.getStyleElement()
+    return { ...page, styleTags }
   }
 
   render() {
@@ -42,9 +36,11 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>With Emotion</title>
-          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          {this.props.styleTags}
         </Head>
         <body>
+          <GlobalStyle whiteColor />
+
           <Main />
           <NextScript />
         </body>
