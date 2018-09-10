@@ -1,6 +1,7 @@
 {
   "name": "arnodonet",
   "alias": "next.arnodo.net",
+  "type": "docker",
   "env": {
     "GIST_TOKEN": "@gist-token.next",
     "GIST_ID": "3d623b91098eac8d1b3ffd92d9ab1f13"
