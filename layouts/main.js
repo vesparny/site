@@ -16,7 +16,7 @@ if (global.document) {
 export default class Main extends Component {
   componentDidMount() {
     window
-      .fetch(`visit?url=${window.location.pathname + window.location.search}`)
+      .fetch(`/visit?url=${window.location.pathname + window.location.search}`)
       .catch(err => console.log(err))
   }
   render() {
