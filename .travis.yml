@@ -12,12 +12,12 @@ after_success: |
     script: now --local-config next.arnodo.net.now.json --public --token $NOW_TOKEN && now --local-config next.arnodo.net.now.json alias --token $NOW_TOKEN
     skip_cleanup: true
   git config user.name "Travis-CI"
-      next: true
+      branch: next
   git commit -m "Deployed to Github Pages"
   git push -f -q https://${GH_TOKEN}@github.com/vesparny/alessandro.arnodo.net gh-pages
     skip_cleanup: true
     on:
-      master: true
+      branch: master
 env:
   global:
     - secure: "pKNdx01jtaewdQ2GMh/PLv/IezxGbun3UWGZgZb5i5MoIWU2Pj3LaXgKI47Bi1j9exAnJgYTbJzPsa57kVzUZeWvRsIFCUoWDVTTrBhSSZBsu6JgRECaj4lBuEoBYaBbr28+pHqdt5eZtkWYJztfR42VrtR6LG6tcKvdkeAC+En0waac81oD7VAS4iuamCgMTzTVgpFdtH/sBLZtGQpTjetfpeGkDY+bTqzXL5dM3LOxACMz2CNr3egyVH+DmU1+tEYPw7PhfkpQig2UTNwMhBjp0TrxO+hDZZPLRpEmVBI43gouRwZuQRBnIBzqpdDPXKJKwutLmNR2DyvW+lgBrk5p2MlBChSmDUYjU4KAAxL2IpYwTYHHNU4lOcVnb1eh6pN2CFouaMcAMJHVNJtG6ry9cAVACevS5HUB7XUXKtQu38jq4Vl94Uh4UHDdcwLRgaHLITCq8YnahnYL4pIAKF3zsH5MZALQ9Uk41MqfxNC2TVmpvKbi+ERqzwohF4ttjtqoxnJDDGiEQWSf5XN4CQLrywY4xx6wjlCZq4NCSEmFN55jD+qNOVGjY+iozcPnjWttLUDQYM35uVVeVKz4K8uPRmN3CdxT42WZc3RD9lm0cPQC6n6fjFxI1QgYWDkYRbp87i79WFYL4vJRPndYQsIVR6KeudonCkBav552Hnc="
