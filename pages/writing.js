@@ -2,9 +2,24 @@ import Link from 'next/link'
 import posts from '../posts'
 import Page from '../layouts/main'
 import Post from '../layouts/post'
-
+import { Card, Box, Flex } from 'rebass'
+import { Text, Container, Separator } from '../components/ui'
 import React, { Component } from 'react'
 import Error from 'next/error'
+import format from 'date-fns/format'
+import {
+  P,
+  Blockquote,
+  H4,
+  H3,
+  A,
+  Code,
+  InlineCode,
+  Pre,
+  Hr,
+  Li,
+  Ul
+} from '../components/mdx'
 
 export default class Writing extends Component {
   static getInitialProps({ query, res }) {
@@ -18,12 +33,15 @@ export default class Writing extends Component {
     }
     return {
       permalink: posts.imports[permalink] ? permalink : null,
-      isPost: Object.keys(query).length > 0
+      isPost: Object.keys(query).length > 0,
+      meta: posts.imports[permalink]
+        ? posts.meta.find(p => p.permalink === permalink)
+        : null
     }
   }
 
   render() {
-    const { permalink, isPost } = this.props
+    const { permalink, isPost, meta } = this.props
     const MDXPost = posts.imports[permalink]
     if (isPost && !MDXPost) {
       return <Error statusCode={404} />
@@ -31,7 +49,51 @@ export default class Writing extends Component {
     if (permalink) {
       return (
         <Post>
-          <MDXPost />
+          <Card as="aside">
+            <Text as="h1" m={0} fontSize={5} textAlign="center">
+              {meta.title}
+            </Text>
+            <Text fontSize={1} textAlign="center" color="silver" mt={3} mb={4}>
+              {format(meta.date, 'dddd, MMMM Do YYYY')}
+            </Text>
+            <Separator />
+            <Card mt={4} mb={4}>
+              <Flex alignItems="center" justifyContent="center">
+                <Box
+                  as="img"
+                  css={{
+                    maxWidth: 'none',
+                    width: '30px',
+                    height: '30px',
+                    backgroundColor: '#ddd',
+                    borderRadius: '9999999px'
+                  }}
+                  src="https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=30"
+                />
+                <Text ml={2} color="silver" textAlign="center" fontSize={1}>
+                  {meta.author}
+                </Text>
+              </Flex>
+            </Card>
+          </Card>
+
+          <Container>
+            <MDXPost
+              components={{
+                p: P,
+                blockquote: Blockquote,
+                h4: H4,
+                h3: H3,
+                a: A,
+                code: Code,
+                inlineCode: InlineCode,
+                pre: Pre,
+                hr: Hr,
+                li: Li,
+                ul: Ul
+              }}
+            />
+          </Container>
         </Post>
       )
     } else {

@@ -1629,7 +1629,7 @@ d@1:
   dependencies:
     es5-ext "^0.10.9"
 
-date-fns@^1.27.2:
+date-fns@^1.27.2, date-fns@^1.29.0:
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
 
@@ -4519,9 +4519,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-rebass@3.0.0-0:
-  version "3.0.0-0"
-  resolved "https://registry.yarnpkg.com/rebass/-/rebass-3.0.0-0.tgz#f270f374985358463fca5245d866145878e88e3f"
+rebass@^3.0.0-1:
+  version "3.0.0-1"
+  resolved "https://registry.yarnpkg.com/rebass/-/rebass-3.0.0-1.tgz#6a11e7c36c0e7d4ff565dbdc8e3f8a7d95ca84cc"
   dependencies:
     styled-system "^3.0.2"
 

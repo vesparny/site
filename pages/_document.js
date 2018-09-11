@@ -2,16 +2,14 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-* { box-sizing: border-box; }
   body {
     margin: 0;
-    padding: 0;
   }
   #nprogress {
     pointer-events: none;
   }
   #nprogress .bar {
-    background: tomato;
+    background: #FF41B4;
     position: fixed;
     z-index: 1031;
     top: 0;
@@ -43,7 +41,6 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <GlobalStyle whiteColor />
-
           <Main />
           <NextScript />
         </body>

@@ -18,6 +18,7 @@
     "@mdx-js/mdx": "^0.15.0",
     "@zeit/next-mdx": "^1.1.0",
     "brcast": "^3.0.1",
+    "date-fns": "^1.29.0",
     "github-base": "^1.0.0",
     "micro": "^9.3.3",
     "micro-redirect": "^1.0.0",
@@ -27,7 +28,7 @@
     "nprogress": "^0.2.0",
     "react": "16.4.2",
     "react-dom": "16.4.2",
-    "rebass": "3.0.0-0",
+    "rebass": "^3.0.0-1",
     "styled-components": "4.0.0-beta.2"
   },
   "devDependencies": {
