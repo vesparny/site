@@ -36,7 +36,24 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>With Emotion</title>
+          <Head>
+            <link
+              rel="mask-icon"
+              href="http://leo.im/static/lightning.svg"
+              color="#000000"
+            />
+            <link rel="apple-touch-icon" href="/static/touch-icon.png" />
+            <link rel="icon" href="/static/touch-icon.png" type="image/png" />
+
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, user-scalable=no"
+            />
+            <meta name="description" content="Just another code monkey" />
+            <meta name="twitter:site" content="@notquiteleo" />
+            <meta name="twitter:creator" content="@notquiteleo" />
+          </Head>
+
           {this.props.styleTags}
         </Head>
         <body>
