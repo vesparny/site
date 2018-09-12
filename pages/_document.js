@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
           <Head>
             <link
               rel="mask-icon"
-              href="http://leo.im/static/lightning.svg"
+              href="http://arnodo.net/static/logo.svg"
               color="#000000"
             />
             <link rel="apple-touch-icon" href="/static/touch-icon.png" />
@@ -50,8 +50,8 @@ export default class MyDocument extends Document {
               content="width=device-width, initial-scale=1, user-scalable=no"
             />
             <meta name="description" content="Just another code monkey" />
-            <meta name="twitter:site" content="@notquiteleo" />
-            <meta name="twitter:creator" content="@notquiteleo" />
+            <meta name="twitter:site" content="@vesparny" />
+            <meta name="twitter:creator" content="@vesparny" />
           </Head>
 
           {this.props.styleTags}

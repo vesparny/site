@@ -3,7 +3,7 @@ import posts from '../posts'
 import Page from '../layouts/main'
 import Post from '../layouts/post'
 import { Card, Box, Flex } from 'rebass'
-import { Text, Container, Separator } from '../components/ui'
+import { Text, Container, Separator, A as L } from '../components/ui'
 import React, { Component } from 'react'
 import Error from 'next/error'
 import format from 'date-fns/format'
@@ -18,7 +18,8 @@ import {
   Pre,
   Hr,
   Li,
-  Ul
+  Ul,
+  Img
 } from '../components/mdx'
 
 export default class Writing extends Component {
@@ -76,8 +77,7 @@ export default class Writing extends Component {
               </Flex>
             </Card>
           </Card>
-
-          <Container>
+          <Container p={[3, 4, 4]}>
             <MDXPost
               components={{
                 p: P,
@@ -90,7 +90,8 @@ export default class Writing extends Component {
                 pre: Pre,
                 hr: Hr,
                 li: Li,
-                ul: Ul
+                ul: Ul,
+                img: Img
               }}
             />
           </Container>
@@ -99,13 +100,26 @@ export default class Writing extends Component {
     } else {
       return (
         <Page>
-          {posts.meta.map(post => (
-            <li key={post.permalink}>
-              <Link href={`/writing?id=${post.permalink}`} as={post.permalink}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          ))}
+          <Box p={[3, 4, 4]}>
+            {posts.meta.map(post => (
+              <Box key={post.permalink}>
+                <Text
+                  color="silver"
+                  css={{
+                    display: 'inline-block',
+                    width: '150px'
+                  }}>
+                  {format(post.date, 'MMMM DD, YYYY')}
+                </Text>
+                <Link
+                  passHref
+                  href={`/writing?id=${post.permalink}`}
+                  as={post.permalink}>
+                  <L>{post.title}</L>
+                </Link>
+              </Box>
+            ))}
+          </Box>
         </Page>
       )
     }

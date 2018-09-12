@@ -1,4 +1,4 @@
-import { Link, Text, Card, Box } from 'rebass'
+import { Link, Text, Card, Box, Image } from 'rebass'
 
 const BaseText = props => (
   <Text
@@ -12,6 +12,8 @@ const BaseText = props => (
 )
 
 export const P = props => <BaseText {...props} mb={4} mt={0} as="p" />
+
+export const Img = props => <Image {...props} />
 
 export const Blockquote = props => (
   <Card
@@ -55,13 +57,12 @@ export const H3 = props => (
 export const A = props => (
   <Link
     fontFamily="sans"
-    color="blue"
+    color="light-blue"
     css={{
-      borderBottom: '1px dashed currentcolor',
       textDecoration: 'none',
       transition: 'all .3s ease',
       ':hover': {
-        opacity: 3 / 4
+        textDecoration: 'underline'
       }
     }}
     {...props}

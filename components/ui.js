@@ -1,4 +1,5 @@
 import { Box, Card, Text as DefaultText } from 'rebass'
+import theme from './theme'
 
 export const Text = props => (
   <DefaultText
@@ -21,7 +22,8 @@ export const A = props => (
       textDecoration: 'none',
       transition: 'all .3s ease',
       ':hover': {
-        opacity: 3 / 4
+        background: theme.colors.pink,
+        color: 'white'
       }
     }}
     {...props}
