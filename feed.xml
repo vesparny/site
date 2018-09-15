@@ -1,0 +1,87 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Alessandro Arnodo]]></title><description><![CDATA[Alessandro Arnodo]]></description><link>https://alessandro.arnodo.net/</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 28 Mar 2017 13:51:33 GMT</lastBuildDate><atom:link href="https://alessandro.arnodo.net/feed.xml" rel="self" type="application/rss+xml"/><author><![CDATA[Alessandro Arnodo]]></author><item><title><![CDATA[Morpheus is moving forward]]></title><description><![CDATA[<div class="Box" style="box-sizing:border-box;width:90%;max-width:710px;" data-reactid="21"><div class="Box" style="box-sizing:border-box;margin-top:32px;" data-reactid="22"><header style="border-bottom:#E7EEF2 1px solid;" data-reactid="23"><h1 style="margin:0;" data-reactid="24">Morpheus is moving forward</h1><div style="padding:2rem 0;margin-bottom:2rem;font-family:&quot;Open Sans&quot;, sans-serif;line-height:2.7rem;" data-reactid="25"><div class="Summary" data-reactid="26"><img src="https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=24" class="Avatar" width="24" height="24" style="box-sizing:border-box;max-width:none;width:24px;height:24px;background-color:#ddd;border-radius:99999px;float:left;" data-reactid="27"><div class="Space" style="box-sizing:border-box;display:inline-block;width:8px;" data-reactid="28"></div><span data-reactid="29">Alessandro Arnodo</span><span data-reactid="30"> on </span><span data-reactid="31"><a href="https://alessandro.arnodo.net/tag/morpheus" class="tag" data-reactid="32">Morpheus</a><!-- react-text: 33 -->, <!-- /react-text --></span><span data-reactid="34"><a href="https://alessandro.arnodo.net/tag/javascript" class="tag" data-reactid="35">JavaScript</a></span><div class="date" data-reactid="36"><div class="Space" style="box-sizing:border-box;display:inline-block;width:8px;" data-reactid="37"></div><!-- react-text: 38 -->|<!-- /react-text --><div class="Space" style="box-sizing:border-box;display:inline-block;width:8px;" data-reactid="39"></div><time datetime="2015-01-16" data-reactid="40">16 January 2015</time></div></div></div></header><div class="Box markdown-body" style="box-sizing:border-box;margin:4rem 0;" data-reactid="41"><p>The last week has been very exciting for me.
+I tweeted about <strong>Morphues</strong> and wrote <a href="https://alessandro.arnodo.net/2015/01/07/introducing-morpheus">some words</a> about it and the buzz started pretty fast.</p>
+<p>Even though the project is far from its first stable release, I received a lot of questions about the project and its state.</p>
+<blockquote>
+<p>This is the best thing ever for a guy who likes to spend time open-sourcing code &#x1F603;</p>
+</blockquote>
+<p>Morpheus has been featured on:</p>
+<ul>
+<li><a href="http://javascriptweekly.com/issues/214">JavaScript Weekly</a></li>
+<li><a href="http://nodeweekly.com/issues/68">Node Weekly</a></li>
+<li><a href="http://react.rocks/example/morpheus">React Rocks</a></li>
+</ul>
+<p>In these last few days I concentrated on solving some <a href="https://github.com/vesparny/morpheus/issues?q=is%3Aissue+is%3Aclosed">issues</a> and developing new features.</p>
+<h2>RSS</h2>
+<p>Morpheus has now RSS support for blog entries, everything works out of the box. Add this <a href="https://alessandro.arnodo.net/rss/">website</a> to your feed reader for a try.</p>
+<h2>Open Graph</h2>
+<p>Morpheus supports now Meta tags for Open Graph.
+This means that any of your posts shared on Social Network will now have rich content associated.</p>
+<p><img src="https://alessandro.arnodo.net/images/2015/01/screenshot.png" alt="Open graph"></p>
+<h2>Google Analytics</h2>
+<p>A custom google analytics component has been added, you can track page visits now, just adding your tracking code in the configuration file.</p>
+<h2>Next steps</h2>
+<hr>
+<h3>Split the monolith</h3>
+<p>The much more important thing is to rethink Morpheus architecture.
+The application has now a monolithic structure, and the idea is to split it in some npm modules, and give each of them less responsibilities.
+This way the core will be easier to be maintained.</p>
+<h3>Yeoman generator</h3>
+<p>The installation process should be as easy as possible, this is why I&#x2019;m thinking about creating a Yeoman module for installing Morpheus.</p>
+<h2>Help Morpheus</h2>
+<p>I have a lot of <a href="https://github.com/vesparny/morpheus/issues">ideas</a>, but I&#x2019;ve been alone in this adventure so far.</p>
+<p>If you want to contribute with ideas or code, you are more than welcome!</p>
+<p>Should you have any thoughts, you know how to reach out to me, I&#x2019;m here waiting for wise suggestions &#x1F600;</p>
+</div></div><div title="Morpheus is moving forward" data-reactid="42"><div id="disqus_thread" data-reactid="43"></div><noscript data-reactid="44"><span data-reactid="45"><!-- react-text: 46 -->Please enable JavaScript to view the<!-- /react-text --><a href="http://disqus.com/?ref_noscript" data-reactid="47">comments powered by Disqus.</a></span></noscript><a href="http://disqus.com" class="dsq-brlink" data-reactid="48"><!-- react-text: 49 -->Blog comments powered by <!-- /react-text --><span class="logo-disqus" data-reactid="50">Disqus</span><!-- react-text: 51 -->.<!-- /react-text --></a></div></div>]]></description><link>https://alessandro.arnodo.net/2015/01/16/morpheus-is-moving-forward</link><guid isPermaLink="true">https://alessandro.arnodo.net/2015/01/16/morpheus-is-moving-forward</guid><dc:creator><![CDATA[Alessandro Arnodo]]></dc:creator><pubDate>Fri, 16 Jan 2015 14:05:31 GMT</pubDate></item><item><title><![CDATA[Introducing morpheus]]></title><description><![CDATA[<div class="Box" style="box-sizing:border-box;width:90%;max-width:710px;" data-reactid="21"><div class="Box" style="box-sizing:border-box;margin-top:32px;" data-reactid="22"><header style="border-bottom:#E7EEF2 1px solid;" data-reactid="23"><h1 style="margin:0;" data-reactid="24">Introducing morpheus</h1><div style="padding:2rem 0;margin-bottom:2rem;font-family:&quot;Open Sans&quot;, sans-serif;line-height:2.7rem;" data-reactid="25"><div class="Summary" data-reactid="26"><img src="https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=24" class="Avatar" width="24" height="24" style="box-sizing:border-box;max-width:none;width:24px;height:24px;background-color:#ddd;border-radius:99999px;float:left;" data-reactid="27"><div class="Space" style="box-sizing:border-box;display:inline-block;width:8px;" data-reactid="28"></div><span data-reactid="29">Alessandro Arnodo</span><span data-reactid="30"> on </span><span data-reactid="31"><a href="https://alessandro.arnodo.net/tag/morpheus" class="tag" data-reactid="32">Morpheus</a><!-- react-text: 33 -->, <!-- /react-text --></span><span data-reactid="34"><a href="https://alessandro.arnodo.net/tag/javascript" class="tag" data-reactid="35">JavaScript</a></span><div class="date" data-reactid="36"><div class="Space" style="box-sizing:border-box;display:inline-block;width:8px;" data-reactid="37"></div><!-- react-text: 38 -->|<!-- /react-text --><div class="Space" style="box-sizing:border-box;display:inline-block;width:8px;" data-reactid="39"></div><time datetime="2015-01-07" data-reactid="40">07 January 2015</time></div></div></div></header><div class="Box markdown-body" style="box-sizing:border-box;margin:4rem 0;" data-reactid="41"><p><strong>UPDATE: See the features section for last added functionalities.</strong></p>
+<hr>
+<p>The world have plenty of CMS, blogging platform and web publishing platform, so why another one?</p>
+<p><strong>because Morpheus is the first <a href="http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/">isomorphic</a> open-source web publishing platform, and it&#x2019;s built with react and flux.</strong></p>
+<p>Checkout the source code <a href="https://github.com/vesparny/morpheus">here</a>.</p>
+<h3>Reasons behind Morpheus</h3>
+<p>At the time being, developers are building entire applications in the browser using JavaScript. The big part of the logic is living on the client and it talks to the server to an API.</p>
+<p>Once the application is fully loaded, the user can gain a good experience navigating between pages without the need of fully reloading each time.</p>
+<p>This is good, what happens when your website is run by a crawler (google bot or whatever)? If the website can only be executed on the client it won&#x2019;t be able to serve HTML to crawlers, and this will have negative impacts on SEO.</p>
+<p>This is why Morpheus is totally rendered on the server on the first load. Once done, React will attach events to the DOM, and the user will feel the benefits of a single page application, without having to wait for tedious spinners before seeing the content.</p>
+<p>THATS GREAT</p>
+<p>What happens if you disable JavaScript on your browser?</p>
+<p>Let&#x2019;s try, and this website will still work.</p>
+<h3>Features</h3>
+<ul>
+<li>[x] Post and pages displaying, markdown render, posts pagination.</li>
+<li>[x] Server side rendering.</li>
+<li>[x] Comments managed with <a href="https://disqus.com/">Disqus</a>.</li>
+<li>[x] Configurable permalinks.</li>
+<li>[x] Fully working default theme (it&#x2019;s called <strong>blablabla</strong>)</li>
+</ul>
+<p><strong>Updates:</strong></p>
+<ul>
+<li>[x] RSS support.</li>
+</ul>
+<h3>What&#x2019;s next?</h3>
+<p>Morpheus is in its very early stages, and it isn&#x2019;t pretty. <strong>It is far from usable.</strong> Set it up only if you know what you&#x2019;re doing, and expect it to break a lot.</p>
+<h3>Run it</h3>
+<p>It&#x2019;s very easy to get started with Morpheus, checkout the <a href="https://github.com/vesparny/morpheus#readme">README file</a> for further details.</p>
+<p>My website is running with Morpheus and it&#x2019;s hosted on OpenShift, a more detailed post on how I deployed it will follow.</p>
+<p>Find below the Morpheus config file I&#x2019;m using in production.</p>
+<pre><code class="hljs language-javascript"><span class="hljs-pi">&apos;use strict&apos;</span>;
+
+<span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+  log: {
+    level: <span class="hljs-string">&apos;error&apos;</span>,
+    file: path.resolve(process.env.OPENSHIFT_DATA_DIR || <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-string">&apos;log.log&apos;</span>),
+  },
+  debug: <span class="hljs-literal">false</span>,
+  siteUrl: <span class="hljs-string">&apos;https://alessandro.arnodo.net&apos;</span>,
+  useSSL: <span class="hljs-literal">true</span>,
+  port: process.env.OPENSHIFT_NODEJS_PORT || <span class="hljs-number">3000</span>,
+  ip: process.env.OPENSHIFT_NODEJS_IP || <span class="hljs-string">&apos;127.0.0.1&apos;</span>,
+  disqusComments: <span class="hljs-string">&apos;arnodo&apos;</span>,
+  siteTitle: <span class="hljs-string">&apos;Alessandro Arnodo&apos;</span>,
+  siteDescription: <span class="hljs-string">&apos;- Just another code monkey -&apos;</span>,
+};
+</code></pre>
+<p>Stay tuned &#x1F609;</p>
+</div></div><div title="Introducing morpheus" data-reactid="42"><div id="disqus_thread" data-reactid="43"></div><noscript data-reactid="44"><span data-reactid="45"><!-- react-text: 46 -->Please enable JavaScript to view the<!-- /react-text --><a href="http://disqus.com/?ref_noscript" data-reactid="47">comments powered by Disqus.</a></span></noscript><a href="http://disqus.com" class="dsq-brlink" data-reactid="48"><!-- react-text: 49 -->Blog comments powered by <!-- /react-text --><span class="logo-disqus" data-reactid="50">Disqus</span><!-- react-text: 51 -->.<!-- /react-text --></a></div></div>]]></description><link>https://alessandro.arnodo.net/2015/01/07/introducing-morpheus</link><guid isPermaLink="true">https://alessandro.arnodo.net/2015/01/07/introducing-morpheus</guid><dc:creator><![CDATA[Alessandro Arnodo]]></dc:creator><pubDate>Wed, 07 Jan 2015 15:00:00 GMT</pubDate></item></channel></rss>

@@ -34,11 +34,14 @@ export default () => (
               email
             </A>
           </Text>
-          <Text mb={3} fontSize={3} color="mid-gray" fontFamily="sans">
-            My PGP fingerprint is:{' '}
-            <Text mb={3} fontSize={2} color="mid-gray" fontFamily="sans">
-              9EDC 42B1 C91B A064 BD27 5A4B 4F6E F705 55F5 F3E3
-            </Text>
+
+          <Link href="/static/alessandro@arnodo.net.asc" passHref>
+            <A fontSize={2} mx={1}>
+              GPG Public key
+            </A>
+          </Link>
+          <Text mb={3} fontSize={2} color="mid-gray" fontFamily="sans">
+            9EDC 42B1 C91B A064 BD27 5A4B 4F6E F705 55F5 F3E3
           </Text>
         </Box>
         <Box mt={5}>
