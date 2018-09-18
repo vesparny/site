@@ -43,19 +43,15 @@ export default {
   // http://tachyons.io/docs/themes/skins/
   colors: {
     pink: '#FF41B4',
-    red: '#ED1A22',
+    red: '#E81720',
     black: '#000',
     'near-black': '#111',
     'dark-gray': '#333',
     'mid-gray': '#555',
-    // gray: ' #777',
     silver: '#999',
-    // 'light-silver': '#aaa',
     'moon-gray': '#ccc',
     'light-gray': '#eee',
-    // 'near-white': '#f4f4f4',
     blue: '#00449E',
-    white: '#fff',
-    transparent: 'transparent'
+    white: '#fff'
   }
 }

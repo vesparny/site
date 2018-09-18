@@ -82,7 +82,7 @@ export const Hr = props => (
 )
 
 export const Code = props => (
-  <Text color="pink" lineHeight="20px" fontSize={1} as="code" {...props} />
+  <Text color="red" lineHeight="20px" fontSize={1} as="code" {...props} />
 )
 
 export const Pre = props => (
@@ -102,7 +102,7 @@ export const Pre = props => (
 
 export const InlineCode = props => (
   <BaseText
-    color="pink"
+    color="red"
     m={0}
     as="code"
     css={{

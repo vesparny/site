@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
+import theme from '../components/theme'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -9,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     pointer-events: none;
   }
   #nprogress .bar {
-    background: #FF41B4;
+    background: ${theme.colors.red};
     position: fixed;
     z-index: 1031;
     top: 0;

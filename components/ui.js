@@ -16,13 +16,13 @@ export const A = props => (
     as="a"
     fontSize={3}
     fontWeight="normal"
-    color="pink"
+    color="red"
     fontFamily="sans"
     css={{
       textDecoration: 'none',
       transition: 'all .3s ease',
       ':hover': {
-        background: theme.colors.pink,
+        background: theme.colors.red,
         color: 'white'
       }
     }}
