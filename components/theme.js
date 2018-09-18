@@ -43,7 +43,6 @@ export default {
   // http://tachyons.io/docs/themes/skins/
   colors: {
     pink: '#FF41B4',
-    red: '#E81720',
     black: '#000',
     'near-black': '#111',
     'dark-gray': '#333',

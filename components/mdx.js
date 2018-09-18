@@ -24,7 +24,7 @@ export const Blockquote = props => (
     borderLeft={8}
     css={{
       fontStyle: 'italic',
-      color: 'red'
+      color: 'pink'
     }}
     {...props}
   />

@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     pointer-events: none;
   }
   #nprogress .bar {
-    background: ${theme.colors.red};
+    background: ${theme.colors.pink};
     position: fixed;
     z-index: 1031;
     top: 0;
