@@ -6,12 +6,11 @@ import { A } from '../components/ui'
 export default () => (
   <Page>
     <Flex
-      mt="-60px"
       p={[3, 4, 4]}
       alignItems="center"
       justifyContent="center"
       css={{
-        height: 'calc(100vh - 60px)'
+        height: 'calc(100vh - 120px)'
       }}
       color="near-black">
       <Flex
@@ -20,13 +19,13 @@ export default () => (
         alignItems="center"
         justifyContent="center"
         css={{
-          maxWidth: '800px'
+          maxWidth: '710px'
         }}>
         <Box css={{ textAlign: 'center' }}>
           <Text
             as="h1"
             fontWeight="normal"
-            mb={3}
+            mb={1}
             fontSize={6}
             color="mid-gray"
             fontFamily="sans">
@@ -36,8 +35,8 @@ export default () => (
             as="h3"
             fontWeight="normal"
             m={0}
-            mb={5}
-            fontSize={4}
+            mb={4}
+            fontSize={3}
             color="mid-gray"
             fontFamily="sans">
             Software Engineer - I write code. For fun & food.
@@ -69,7 +68,7 @@ export default () => (
             fontSize={3}
             color="mid-gray"
             fontFamily="sans">
-            If you want to get in touch, feel free to send me an{' '}
+            Want to get in touch? Send me an{' '}
             <A fontSize={3} href="mailto:alessandro@arnodo.net">
               email
             </A>{' '}
