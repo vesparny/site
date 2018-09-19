@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   #nprogress .bar {
     background: ${theme.colors.pink};
     position: fixed;
-    z-index: 1031;
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
@@ -20,6 +20,13 @@ const GlobalStyle = createGlobalStyle`
   }
   #nprogress .peg {
     display: none;
+  }
+
+  .canvasWrapper {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
   }
 `
 
