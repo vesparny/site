@@ -102,7 +102,11 @@ export default class Writing extends Component {
         <Page>
           <Box p={[3, 4, 4]}>
             {posts.meta.map(post => (
-              <Box key={post.permalink}>
+              <Flex
+                key={post.permalink}
+                mb={3}
+                flexDirection={['column', 'row', 'row']}
+                alignItems="baseline">
                 <Text
                   color="silver"
                   css={{
@@ -111,13 +115,16 @@ export default class Writing extends Component {
                   }}>
                   {format(post.date, 'MMMM DD, YYYY')}
                 </Text>
-                <Link
-                  passHref
-                  href={`/writing?id=${post.permalink}`}
-                  as={post.permalink}>
-                  <L>{post.title}</L>
-                </Link>
-              </Box>
+                <Box>
+                  <Link
+                    display={'inline-block'}
+                    passHref
+                    href={`/writing?id=${post.permalink}`}
+                    as={post.permalink}>
+                    <L>{post.title}</L>
+                  </Link>
+                </Box>
+              </Flex>
             ))}
           </Box>
         </Page>

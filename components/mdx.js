@@ -1,11 +1,11 @@
-import { Link, Text, Card, Box, Image } from 'rebass'
+import { Text, Card, Box, Image } from 'rebass'
 
 const BaseText = props => (
   <Text
     lineHeight="26px"
     color="near-black"
     fontWeight="normal"
-    fontSize={2}
+    fontSize={3}
     fontFamily="sans"
     {...props}
   />
@@ -32,7 +32,7 @@ export const Blockquote = props => (
 
 export const H4 = props => (
   <BaseText
-    fontSize={2}
+    fontSize={3}
     mt={4}
     mb={3}
     mx={0}
@@ -44,7 +44,7 @@ export const H4 = props => (
 
 export const H3 = props => (
   <BaseText
-    fontSize={3}
+    fontSize={4}
     mt={5}
     mb={4}
     mx={0}
@@ -55,7 +55,8 @@ export const H3 = props => (
 )
 
 export const A = props => (
-  <Link
+  <Text
+    as="a"
     fontFamily="sans"
     color="light-blue"
     css={{
@@ -82,7 +83,7 @@ export const Hr = props => (
 )
 
 export const Code = props => (
-  <Text color="pink" lineHeight="20px" fontSize={1} as="code" {...props} />
+  <Text color="pink" lineHeight="20px" fontSize={2} as="code" {...props} />
 )
 
 export const Pre = props => (
@@ -129,7 +130,7 @@ export const Ul = props => (
 
 export const Li = props => (
   <Box
-    fontSize={2}
+    fontSize={3}
     mb={2}
     as="li"
     css={{

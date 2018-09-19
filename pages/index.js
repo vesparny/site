@@ -6,6 +6,7 @@ import { A } from '../components/ui'
 export default () => (
   <Page>
     <Flex
+      mt="-60px"
       p={[3, 4, 4]}
       alignItems="center"
       justifyContent="center"
@@ -22,53 +23,92 @@ export default () => (
           maxWidth: '800px'
         }}>
         <Box css={{ textAlign: 'center' }}>
-          <Text mb={3} fontSize={5} color="mid-gray" fontFamily="sans">
+          <Text
+            as="h1"
+            fontWeight="normal"
+            mb={3}
+            fontSize={6}
+            color="mid-gray"
+            fontFamily="sans">
             Alessandro Arnodo
           </Text>
-          <Text mb={3} fontSize={3} color="mid-gray" fontFamily="sans">
-            I write code. For fun & food.
+          <Text
+            as="h3"
+            fontWeight="normal"
+            m={0}
+            mb={5}
+            fontSize={4}
+            color="mid-gray"
+            fontFamily="sans">
+            Software Engineer - I write code. For fun & food.
           </Text>
-          <Text mb={3} fontSize={1} color="mid-gray" fontFamily="sans">
+          <Text
+            as="h3"
+            fontWeight="normal"
+            m={0}
+            mb={3}
+            fontSize={3}
+            color="mid-gray"
+            fontFamily="sans">
+            I do things for web and mobile. Mostly in JavaScript.
+          </Text>
+          <Text
+            as="h3"
+            fontWeight="normal"
+            m={0}
+            mb={3}
+            fontSize={3}
+            color="mid-gray"
+            fontFamily="sans">
+            Born and raised in Italy 🇮🇹 currently working in Switzerlad 🇨🇭
+          </Text>
+          <Text
+            m={0}
+            mb={3}
+            mt={5}
+            fontSize={3}
+            color="mid-gray"
+            fontFamily="sans">
             If you want to get in touch, feel free to send me an{' '}
-            <A fontSize={2} href="mailto:alessandro@arnodo.net">
+            <A fontSize={3} href="mailto:alessandro@arnodo.net">
               email
             </A>{' '}
             ({' '}
             <Link href="/static/alessandro@arnodo.net.asc" passHref>
-              <A fontSize={'inherit'}>GPG</A>
+              <A fontSize={3}>GPG</A>
             </Link>{' '}
             0x55F5F3E3 )
           </Text>
         </Box>
         <Box mt={5}>
           <Link href="/writing" passHref>
-            <A fontSize={2} mx={1}>
+            <A fontSize={3} mx={1}>
               writing
             </A>
           </Link>
           <A
-            fontSize={2}
+            fontSize={3}
             target="_blank"
             href="https://twitter.com/vesparny"
             mx={2}>
             tweets
           </A>
           <A
-            fontSize={2}
+            fontSize={3}
             target="_blank"
             href="https://github.com/vesparny"
             mx={2}>
             code
           </A>
           <A
-            fontSize={2}
+            fontSize={3}
             target="_blank"
             href="https://mastodon.social/@vesparny"
             mx={2}>
             mastodon
           </A>
           <A
-            fontSize={2}
+            fontSize={3}
             target="_blank"
             href="https://keybase.io/vesparny"
             mx={2}>

@@ -34,7 +34,7 @@ export const Container = props => (
   <Box
     m="0 auto"
     css={{
-      maxWidth: '650px'
+      maxWidth: '710px'
     }}
     {...props}
   />
