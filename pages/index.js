@@ -102,13 +102,6 @@ export default () => (
           <A
             fontSize={3}
             target="_blank"
-            href="https://mastodon.social/@vesparny"
-            mx={2}>
-            mastodon
-          </A>
-          <A
-            fontSize={3}
-            target="_blank"
             href="https://keybase.io/vesparny"
             mx={2}>
             keybase
