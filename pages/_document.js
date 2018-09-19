@@ -21,13 +21,6 @@ const GlobalStyle = createGlobalStyle`
   #nprogress .peg {
     display: none;
   }
-
-  .canvasWrapper {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-  }
 `
 
 export default class MyDocument extends Document {
