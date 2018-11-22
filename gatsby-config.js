@@ -1,3 +1,5 @@
+const theme = require('./src/theme')
+
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -8,6 +10,15 @@ module.exports = {
     keywords: ['bitcoin', 'trading', 'crypto', 'cryptocurrencies']
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: theme.colors.pink,
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -44,8 +55,8 @@ module.exports = {
         name: 'www',
         short_name: 'www',
         start_url: '/',
-        background_color: '#fff',
-        theme_color: '#3ED3D8',
+        background_color: theme.colors.white,
+        theme_color: theme.colors.green,
         display: 'standalone',
         icon: 'static/logo.svg'
       }

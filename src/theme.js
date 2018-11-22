@@ -1,7 +1,7 @@
 // https://github.com/pricelinelabs/design-system/blob/e0cdf16a084d7edeb8010852922f8569f48378d8/src/theme.js
 // https://github.com/rebassjs/rebass/blob/891774b359965b8ce91a85b26dee61c7b1f89c29/src/theme.js
 // https://varun.ca/styled-system/
-export default {
+module.exports = {
   breakpoints: ['40em', '52em', '64em'],
   // @media screen and (min-width: 40em)
   // @media screen and (min-width: 52em)
@@ -36,7 +36,7 @@ export default {
   // http://tachyons.io/docs/themes/skins/
   colors: {
     green: '#3ED3D8',
-    orange: '#FF41B4',
+    pink: '#FF41B4',
     black: '#000',
     'near-black': '#1B1B1B',
     'mid-gray': '#555',

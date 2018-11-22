@@ -20,7 +20,6 @@ export const Card = RCard
 
 export const Text = RText
 Text.defaultProps = {
-  lineHeight: '27px',
   color: 'near-black',
   fontWeight: 'normal',
   fontSize: 2,
@@ -34,7 +33,7 @@ export const Image = RImage
 
 export const Header = RHeader
 
-export const P = props => <Box as="p" my={3} {...props} />
+export const P = props => <Text as="p" lineHeight={'27px'} my={3} {...props} />
 
 export const Img = Image
 
@@ -63,7 +62,7 @@ export const H3 = props => (
     borderBottom={1}
     borderColor="light-gray"
     css={{
-      fontWeight: 'normal'
+      fontWeight: 'bold'
     }}
     {...props}
   />
@@ -82,7 +81,7 @@ export const H2 = ({ css = {}, ...rest }) => (
     css={{
       ...css,
       ...{
-        fontWeight: 'normal'
+        fontWeight: 'bold'
       }
     }}
     {...rest}
@@ -90,12 +89,12 @@ export const H2 = ({ css = {}, ...rest }) => (
 )
 
 export const H1 = props => (
-  <Text as="h1" fontSize={5} m0={0} p0={0} fontWeight="normal" {...props} />
+  <Text as="h1" fontSize={5} m0={0} p0={0} fontWeight="bold" {...props} />
 )
 
 const Href = ({ css = {}, ...rest }) => (
   <RLink
-    color="orange"
+    color="pink"
     css={{
       ...css,
       ...{
@@ -127,6 +126,7 @@ export const Hr = props => (
 
 export const Pre = props => (
   <Card
+    fontSize={2}
     as="pre"
     border={1}
     borderColor="light-gray"
@@ -140,9 +140,13 @@ export const Pre = props => (
   />
 )
 
+export const Code = props => (
+  <Text color="pink" fontSize="inherit" as="code" {...props} />
+)
+
 export const InlineCode = props => (
   <Text
-    color="orange"
+    color="pink"
     m={0}
     as="code"
     css={{

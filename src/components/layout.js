@@ -78,7 +78,8 @@ export default ({ children, location }) => (
               hr: P.Hr,
               li: P.Li,
               ul: P.Ul,
-              img: P.Img
+              img: P.Img,
+              code: P.Code
             }}>
             <Root>
               <P.Text fontFamily="sans">
