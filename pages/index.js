@@ -38,7 +38,7 @@ export default () => (
             <Link href="/static/alessandro@arnodo.net.asc" passHref>
               <A fontSize={'inherit'}>GPG</A>
             </Link>{' '}
-            0x55F5F3E3 )
+            0x784358031C8E1716 )
           </Text>
         </Box>
         <Box mt={5}>
