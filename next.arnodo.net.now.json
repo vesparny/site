@@ -1,10 +1,10 @@
 {
   "name": "arnodonet",
   "alias": "next.arnodo.net",
-  "type": "docker",
   "env": {
     "GIST_TOKEN": "@gist-token.next",
     "GIST_ID": "3d623b91098eac8d1b3ffd92d9ab1f13"
   },
-  "version": 2
+  "version": 2,
+  "builds": [{ "src": "server.js", "use": "@now/node" }]
 }
