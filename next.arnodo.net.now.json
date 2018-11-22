@@ -6,5 +6,5 @@
     "GIST_ID": "3d623b91098eac8d1b3ffd92d9ab1f13"
   },
   "version": 2,
-  "builds": [{ "src": "server.js", "use": "@now/node" }]
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
