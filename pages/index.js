@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import Page from '../layouts/main'
 import { Box, Flex, Text } from 'rebass'
@@ -10,7 +11,7 @@ export default () => (
       alignItems="center"
       justifyContent="center"
       css={{
-        height: 'calc(100vh - 120px)'
+        height: 'calc(100vh - 60px)'
       }}
       color="near-black">
       <Flex
@@ -19,88 +20,49 @@ export default () => (
         alignItems="center"
         justifyContent="center"
         css={{
-          maxWidth: '710px'
+          maxWidth: '800px'
         }}>
         <Box css={{ textAlign: 'center' }}>
-          <Text
-            as="h1"
-            fontWeight="normal"
-            mb={1}
-            fontSize={6}
-            color="mid-gray"
-            fontFamily="sans">
+          <Text mb={3} fontSize={5} color="mid-gray" fontFamily="sans">
             Alessandro Arnodo
           </Text>
-          <Text
-            as="h3"
-            fontWeight="normal"
-            m={0}
-            mb={4}
-            fontSize={3}
-            color="mid-gray"
-            fontFamily="sans">
-            Software Engineer - I write code. For fun & food.
+          <Text mb={3} fontSize={3} color="mid-gray" fontFamily="sans">
+            I write code. For fun & food.
           </Text>
-          <Text
-            as="h3"
-            fontWeight="normal"
-            m={0}
-            mb={3}
-            fontSize={3}
-            color="mid-gray"
-            fontFamily="sans">
-            I do things for web and mobile. Mostly in JavaScript.
-          </Text>
-          <Text
-            as="h3"
-            fontWeight="normal"
-            m={0}
-            mb={3}
-            fontSize={3}
-            color="mid-gray"
-            fontFamily="sans">
-            Born and raised in Italy 🇮🇹 currently working in Switzerlad 🇨🇭
-          </Text>
-          <Text
-            m={0}
-            mb={3}
-            mt={5}
-            fontSize={3}
-            color="mid-gray"
-            fontFamily="sans">
-            Want to get in touch? Send me an{' '}
-            <A fontSize={3} href="mailto:alessandro@arnodo.net">
+          <Text mb={3} fontSize={1} color="mid-gray" fontFamily="sans">
+            If you want to get in touch, feel free to send me an{' '}
+            <A fontSize={2} href="mailto:alessandro@arnodo.net">
               email
             </A>{' '}
             ({' '}
             <Link href="/static/alessandro@arnodo.net.asc" passHref>
-              <A fontSize={3}>GPG</A>
+              <A fontSize={'inherit'}>GPG</A>
             </Link>{' '}
             0x55F5F3E3 )
           </Text>
         </Box>
         <Box mt={5}>
           <Link href="/writing" passHref>
-            <A fontSize={3} mx={1}>
+            <A fontSize={2} mx={1}>
               writing
             </A>
           </Link>
           <A
-            fontSize={3}
+            fontSize={2}
             target="_blank"
             href="https://twitter.com/vesparny"
             mx={2}>
             tweets
           </A>
           <A
-            fontSize={3}
+            fontSize={2}
             target="_blank"
             href="https://github.com/vesparny"
             mx={2}>
             code
           </A>
           <A
-            fontSize={3}
+            fontSize={2}
             target="_blank"
             href="https://keybase.io/vesparny"
             mx={2}>
