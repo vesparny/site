@@ -36,9 +36,10 @@ export default {
   // http://tachyons.io/docs/themes/skins/
   colors: {
     green: '#3ED3D8',
-    orange: '#ED613B',
+    orange: '#FF41B4',
     black: '#000',
     'near-black': '#1B1B1B',
+    'mid-gray': '#555',
     silver: '#999',
     'moon-gray': '#ccc',
     'light-gray': '#eee',

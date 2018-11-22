@@ -93,8 +93,8 @@ export const H1 = props => (
   <Text as="h1" fontSize={5} m0={0} p0={0} fontWeight="normal" {...props} />
 )
 
-export const A = ({ css = {}, ...rest }) => (
-  <Link
+const Href = ({ css = {}, ...rest }) => (
+  <RLink
     color="orange"
     css={{
       ...css,
@@ -110,6 +110,8 @@ export const A = ({ css = {}, ...rest }) => (
     {...rest}
   />
 )
+
+export const A = Href
 
 export const Hr = props => (
   <Card
@@ -191,16 +193,16 @@ export const Link = ({ children, to, ...rest }) => {
 
   if (internal) {
     return (
-      <GatsbyLink to={to} {...rest}>
+      <Href as={GatsbyLink} to={to} {...rest}>
         {children}
-      </GatsbyLink>
+      </Href>
     )
   }
 
   return (
-    <RLink href={to} {...rest}>
+    <Href href={to} {...rest}>
       {children}
-    </RLink>
+    </Href>
   )
 }
 

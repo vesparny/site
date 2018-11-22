@@ -7,7 +7,6 @@ import Layout from '../components/layout'
 import * as P from '../components/primitives'
 
 export default function Post({ data: { mdx }, location, ...rest }) {
-  console.log(location)
   return (
     <Layout location={location} hideSidebar>
       <Helmet>
@@ -16,7 +15,12 @@ export default function Post({ data: { mdx }, location, ...rest }) {
         <meta property="og:title" content={mdx.frontmatter.title} />
         <meta property="og:description" content={mdx.frontmatter.description} />
       </Helmet>
-      <P.Card as="aside">
+      <P.Box
+        m="0 auto"
+        pt={5}
+        css={{
+          maxWidth: '740px'
+        }}>
         <P.H1 textAlign="center">{mdx.frontmatter.title}</P.H1>
         <P.Text fontSize={1} textAlign="center" color="silver" mt={3} mb={4}>
           {mdx.frontmatter.date}
@@ -57,8 +61,8 @@ export default function Post({ data: { mdx }, location, ...rest }) {
             )}
           </P.Flex>
         </P.Card>
-      </P.Card>
-      <MDXRenderer>{mdx.code.body}</MDXRenderer>
+        <MDXRenderer>{mdx.code.body}</MDXRenderer>
+      </P.Box>
     </Layout>
   )
 }

@@ -1,103 +1,38 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import * as P from '../components/primitives'
 
-const TitleLink = ({ children, to }) => (
-  <P.Link to={to} style={{ zIndex: 2 }}>
-    <P.H2
-      borderBottom={0}
-      fontSize={4}
-      mb={0}
-      mt={0}
-      color="near-black"
-      css={{
-        display: 'inline-block'
-      }}>
-      {children}
-    </P.H2>
-  </P.Link>
-)
-
 const Blog = ({ data: { allMdx }, location }) => {
   const posts = allMdx.edges
   return (
-    <Layout location={location} hideSidebar>
+    <Layout location={location}>
       <Helmet>
-        <title>blog</title>
+        <title>writing</title>
       </Helmet>
       {posts.map(({ node: post }) => (
-        <P.Card
-          as="article"
-          mb={4}
-          p={3}
-          key={post.id}
-          css={{
-            position: 'relative',
-            boxShadow: 'rgba(0,0,0,0.075) 3px 6px 10px 0px',
-            transition: 'all.3s ease',
-            ':hover': {
-              boxShadow: 'rgba(0,0,0,0.075) 3px 6px 40px 0px'
-            }
-          }}>
-          <TitleLink to={post.fields.slug}>{post.frontmatter.title}</TitleLink>
-          <P.Text fontSize={2} color="silver" mt={2} mb={1}>
+        <P.Flex
+          key={post.fields.slug}
+          mb={3}
+          flexDirection={['column', 'row', 'row']}
+          alignItems="baseline">
+          <P.Text
+            color="silver"
+            mr={3}
+            css={{
+              display: 'inline-block',
+              width: '180px'
+            }}>
             {post.frontmatter.date}
           </P.Text>
-          <P.Card mt={0} mb={4}>
-            <P.Flex>
-              {post.frontmatter.avatarUrl && (
-                <P.Image
-                  css={{
-                    width: '30px',
-                    height: '30px',
-                    borderRadius: '9999999px'
-                  }}
-                  src={post.frontmatter.avatarUrl}
-                />
-              )}
-              <P.Text ml={2} color="silver" textAlign="center" fontSize={1}>
-                {post.frontmatter.author}
-              </P.Text>
-              {post.frontmatter.twitter && (
-                <Fragment>
-                  <P.Text color="silver" fontSize={1}>
-                    {' ( '}
-                  </P.Text>
-                  <P.Box css={{ zIndex: 1 }}>
-                    <P.A
-                      href={`https://twitter.com/${post.frontmatter.twitter}`}
-                      fontSize={1}
-                      css={{ zIndex: 1 }}>
-                      @{post.frontmatter.twitter}
-                    </P.A>
-                  </P.Box>
-
-                  <P.Text color="silver" fontSize={1}>
-                    {' ) '}
-                  </P.Text>
-                </Fragment>
-              )}
-            </P.Flex>
-          </P.Card>
-          <P.Text>{post.excerpt}</P.Text>
-          <P.Link
-            to={post.fields.slug}
-            style={{
-              position: 'absolute',
-              top: '0px',
-              left: '0px',
-              right: '0px',
-              bottom: '0px',
-              textIndent: '-100%',
-              whiteSpace: 'nowrap',
-              zIndex: '0',
-              overflow: 'hidden'
-            }}
-          />
-        </P.Card>
+          <P.Box>
+            <P.Link display={'inline-block'} to={post.fields.slug}>
+              {post.frontmatter.title}
+            </P.Link>
+          </P.Box>
+        </P.Flex>
       ))}
     </Layout>
   )

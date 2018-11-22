@@ -4,7 +4,6 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import * as P from './primitives'
 import theme from '../theme'
-import Sidebar from './sidebar'
 import Header from './header'
 
 import Helmet from 'react-helmet'
@@ -27,7 +26,7 @@ export const Root = props => (
   />
 )
 
-export default ({ children, location, hideSidebar }) => (
+export default ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -84,17 +83,7 @@ export default ({ children, location, hideSidebar }) => (
             <Root>
               <P.Text fontFamily="sans">
                 <Header />
-                {!hideSidebar && <Sidebar />}
-                <P.Box pl={hideSidebar ? 0 : '20rem'}>
-                  <P.Box
-                    m="0 auto"
-                    pt={5}
-                    css={{
-                      maxWidth: '740px'
-                    }}>
-                    {children}
-                  </P.Box>
-                </P.Box>
+                {children}
               </P.Text>
             </Root>
           </MDXProvider>

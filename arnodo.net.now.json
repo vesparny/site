@@ -1,9 +1,0 @@
-{
-  "name": "arnodonet",
-  "alias": "arnodo.net",
-  "env": {
-    "GIST_TOKEN": "@gist-token",
-    "GIST_ID": "d35dcc45354d1abfd9ce24b346272650"
-  },
-  "version": 1
-}
