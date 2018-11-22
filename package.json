@@ -4,9 +4,8 @@
   "description": "my personal website",
   "main": "server.js",
   "scripts": {
-    "dev": "micro-dev server.js --watch analytics.js --silent",
-    "build": "next build",
-    "start": "NODE_ENV=production micro",
+    "build": "gatsby build",
+    "dev": "gatsby develop",
     "test": "npm run lint",
     "lint": "eslint .",
     "prettier": "prettier '{pages,assets}/**/*.js' --write"
@@ -14,19 +13,28 @@
   "author": "Alessandro Arnodo <alessandro@arnodo.net> (https://arnodo.net)",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/mdx": "^0.16.3",
-    "@zeit/next-mdx": "^1.2.0",
+    "@mdx-js/mdx": "^0.15.5",
+    "@mdx-js/tag": "^0.15.0",
     "brcast": "^3.0.1",
     "date-fns": "^1.29.0",
-    "github-base": "^1.0.0",
-    "micro": "^9.3.3",
-    "micro-redirect": "^1.0.0",
-    "micro-route": "^2.5.0",
-    "next": "7.0.2",
-    "now-env": "^3.1.0",
-    "nprogress": "^0.2.0",
+    "gatsby": "^2.0.54",
+    "gatsby-image": "^2.0.20",
+    "gatsby-mdx": "^0.2.0",
+    "gatsby-plugin-catch-links": "^2.0.8",
+    "gatsby-plugin-manifest": "^2.0.10",
+    "gatsby-plugin-offline": "^2.0.17",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.13",
+    "gatsby-plugin-styled-components": "^3.0.3",
+    "gatsby-remark-copy-linked-files": "^2.0.6",
+    "gatsby-remark-images": "^3.0.0",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-remark": "^2.1.12",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "lodash.groupby": "^4.6.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
+    "react-helmet": "^5.2.0",
     "rebass": "^3.0.0-11",
     "styled-components": "4.1.1"
   },
@@ -44,7 +52,6 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
-    "micro-dev": "^3.0.0",
     "prettier": "^1.15.2"
   },
   "lint-staged": {
@@ -52,6 +59,10 @@
       "*.js": [
         "prettier --write",
         "eslint --fix",
+        "git add"
+      ],
+      "*.md": [
+        "prettier --write",
         "git add"
       ]
     }

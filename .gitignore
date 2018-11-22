@@ -4,3 +4,5 @@ build
 *.log
 .next
 now-secrets.json
+.cache
+public
