@@ -9,8 +9,7 @@
     "start": "NODE_ENV=production micro",
     "test": "npm run lint",
     "lint": "eslint .",
-    "prettier": "prettier '{pages,assets}/**/*.js' --write",
-    "precommit": "lint-staged"
+    "prettier": "prettier '{pages,assets}/**/*.js' --write"
   },
   "author": "Alessandro Arnodo <alessandro@arnodo.net> (https://arnodo.net)",
   "license": "MIT",
@@ -55,6 +54,11 @@
         "eslint --fix",
         "git add"
       ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   }
 }
