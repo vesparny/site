@@ -2,6 +2,7 @@ if (process.env.NODE_ENV !== 'production') {
   process.env.NOW_CONFIG = 'local.now.json'
   require('now-env')
 }
+// eslint-disable-next-line
 const { parse } = require('url')
 const { send } = require('micro')
 const match = require('micro-route/match')
