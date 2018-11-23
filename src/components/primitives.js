@@ -82,7 +82,15 @@ export const H2 = ({ css = {}, ...rest }) => (
 )
 
 export const H1 = props => (
-  <Text as="h1" fontSize={5} m0={0} p0={0} fontWeight="bold" {...props} />
+  <Text
+    as="h1"
+    fontSize={5}
+    m0={0}
+    p0={0}
+    fontWeight="bold"
+    color="mid-gray"
+    {...props}
+  />
 )
 
 const Href = ({ css = {}, ...rest }) => (

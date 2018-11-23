@@ -22,13 +22,13 @@ export default ({ location }) => (
           maxWidth: '800px'
         }}>
         <P.Box css={{ textAlign: 'center' }}>
-          <P.Text mb={3} fontSize={5} color="mid-gray" fontFamily="sans">
+          <P.Text mb={3} fontSize={5} color="mid-gray">
             Alessandro Arnodo
           </P.Text>
-          <P.Text mb={3} fontSize={3} color="mid-gray" fontFamily="sans">
+          <P.Text mb={3} fontSize={3} color="mid-gray">
             I write code. For fun & food.
           </P.Text>
-          <P.Text mb={3} fontSize={2} color="mid-gray" fontFamily="sans">
+          <P.Text mb={3} fontSize={2} color="mid-gray">
             If you want to get in touch, feel free to send me an{' '}
             <P.Link fontSize={2} href="mailto:alessandro@arnodo.net">
               email
