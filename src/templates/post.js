@@ -8,7 +8,7 @@ import * as P from '../components/primitives'
 
 export default function Post({ data: { mdx }, location, ...rest }) {
   return (
-    <Layout location={location} hideSidebar>
+    <Layout location={location} showWritingLink>
       <Helmet>
         <title>{mdx.frontmatter.title}</title>
         <meta name="description" content={mdx.frontmatter.description} />
@@ -53,7 +53,6 @@ export default function Post({ data: { mdx }, location, ...rest }) {
                     @{mdx.frontmatter.twitter}
                   </P.A>
                 </P.Box>
-
                 <P.Text color="silver" fontSize={2}>
                   {' ) '}
                 </P.Text>

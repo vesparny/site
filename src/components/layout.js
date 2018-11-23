@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 export const Root = props => (
   <P.Box
     {...props}
+    px={[3, 4, 4]}
     css={{
       '& *': {
         boxSizing: 'border-box'
@@ -26,7 +27,7 @@ export const Root = props => (
   />
 )
 
-export default ({ children, location }) => (
+export default ({ children, location, showWritingLink }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -83,7 +84,7 @@ export default ({ children, location }) => (
             }}>
             <Root>
               <P.Text fontFamily="sans">
-                <Header />
+                <Header showWritingLink={showWritingLink} />
                 {children}
               </P.Text>
             </Root>

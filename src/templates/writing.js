@@ -12,6 +12,20 @@ const Blog = ({ data: { allMdx }, location }) => {
       <Helmet>
         <title>writing</title>
       </Helmet>
+      <P.Box mt={1} mb={4}>
+        <P.H3
+          color="mid-gray"
+          fontSize={4}
+          as="span"
+          borderBottom={0}
+          fontWeight="normal">
+          Alessandro Writing (
+          <P.Link display={'inline-block'} to={'/feed.xml'}>
+            rss
+          </P.Link>
+          )
+        </P.H3>
+      </P.Box>
       {posts.map(({ node: post }) => (
         <P.Flex
           key={post.fields.slug}
@@ -23,7 +37,7 @@ const Blog = ({ data: { allMdx }, location }) => {
             mr={3}
             css={{
               display: 'inline-block',
-              width: '180px'
+              width: '130px'
             }}>
             {post.frontmatter.date}
           </P.Text>

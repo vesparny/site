@@ -28,7 +28,7 @@ export default ({ location }) => (
           <P.Text mb={3} fontSize={3} color="mid-gray" fontFamily="sans">
             I write code. For fun & food.
           </P.Text>
-          <P.Text mb={3} fontSize={1} color="mid-gray" fontFamily="sans">
+          <P.Text mb={3} fontSize={2} color="mid-gray" fontFamily="sans">
             If you want to get in touch, feel free to send me an{' '}
             <P.Link fontSize={2} href="mailto:alessandro@arnodo.net">
               email
@@ -40,29 +40,17 @@ export default ({ location }) => (
             0x784358031C8E1716 )
           </P.Text>
         </P.Box>
-        <P.Box mt={5}>
+        <P.Box mt={5} fontSize={3}>
           <P.Link mx={2} to="/writing">
             writing
           </P.Link>
-          <P.Link
-            fontSize={2}
-            target="_blank"
-            href="https://twitter.com/vesparny"
-            mx={2}>
+          <P.Link target="_blank" href="https://twitter.com/vesparny" mx={2}>
             tweets
           </P.Link>
-          <P.Link
-            fontSize={2}
-            target="_blank"
-            href="https://github.com/vesparny"
-            mx={2}>
+          <P.Link target="_blank" href="https://github.com/vesparny" mx={2}>
             code
           </P.Link>
-          <P.Link
-            fontSize={2}
-            target="_blank"
-            href="https://keybase.io/vesparny"
-            mx={2}>
+          <P.Link target="_blank" href="https://keybase.io/vesparny" mx={2}>
             keybase
           </P.Link>
         </P.Box>

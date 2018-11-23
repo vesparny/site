@@ -61,9 +61,7 @@ export const H3 = props => (
     mx={0}
     borderBottom={1}
     borderColor="light-gray"
-    css={{
-      fontWeight: 'bold'
-    }}
+    fontWeight="bold"
     {...props}
   />
 )
@@ -78,12 +76,7 @@ export const H2 = ({ css = {}, ...rest }) => (
     mx={0}
     borderBottom={1}
     borderColor="light-gray"
-    css={{
-      ...css,
-      ...{
-        fontWeight: 'bold'
-      }
-    }}
+    fontWeight="bold"
     {...rest}
   />
 )
