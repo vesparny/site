@@ -41,8 +41,6 @@ A custom google analytics component has been added, you can track page visits no
 
 ### Next steps
 
----
-
 #### Split the monolith
 
 The much more important thing is to rethink the Morpheus architecture.
