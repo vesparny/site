@@ -20,7 +20,7 @@ const Blog = ({ data: { allMdx }, location }) => {
           borderBottom={0}
           fontWeight="normal">
           Alessandro Writing (
-          <P.Link display={'inline-block'} to={withPrefix('/feed.xml')}>
+          <P.Link display={'inline-block'} to={withPrefix('/feed.xml')} isAsset>
             rss
           </P.Link>
           )

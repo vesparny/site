@@ -34,7 +34,9 @@ export default ({ location }) => (
               email
             </P.Link>{' '}
             ({' '}
-            <P.Link href={withPrefix('/alessandro@arnodo.net.asc')}>GPG</P.Link>{' '}
+            <P.Link to={withPrefix('/alessandro@arnodo.net.asc')} isAsset>
+              GPG
+            </P.Link>{' '}
             0x784358031C8E1716 )
           </P.Text>
         </P.Box>

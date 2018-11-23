@@ -185,10 +185,9 @@ export const Separator = props => (
   <Card width="100%" borderColor="moon-gray" borderBottom={1} {...props} />
 )
 
-export const Link = ({ children, to, ...rest }) => {
+export const Link = ({ children, to, isAsset, ...rest }) => {
   const internal = /^\/(?!\/)/.test(to)
-
-  if (internal) {
+  if (!isAsset && internal) {
     return (
       <Href as={GatsbyLink} to={to} {...rest}>
         {children}
