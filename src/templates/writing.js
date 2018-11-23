@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import * as P from '../components/primitives'
 
-const Blog = ({ data: { allMdx }, location }) => {
+export default function Writing({ data: { allMdx }, location }) {
   const posts = allMdx.edges
   return (
     <Layout location={location}>
@@ -52,11 +52,12 @@ const Blog = ({ data: { allMdx }, location }) => {
   )
 }
 
-export default Blog
-
 export const pageQuery = graphql`
   query {
-    allMdx(filter: { fields: { type: { eq: "post" } } }) {
+    allMdx(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fields: { type: { eq: "post" } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 180)
