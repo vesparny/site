@@ -1,7 +1,7 @@
 ---
 author: 'Alessandro Arnodo'
 twitter: 'vesparny'
-avatarUrl: ''
+avatarUrl: 'https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=24'
 date: '2015-01-07T15:49:16.408Z'
 title: 'Introuducing morpheus'
 description: 'A gentle introduction to Morpheus, the very first isomorphic web publishing platform'
@@ -11,37 +11,37 @@ keywords: ['react']
 
 ---
 
-** UPDATE: See the features section for last added functionalities. **
+** UPDATE: See the new features **
 
 ---
 
-The world have plenty of CMS, blogging platform and web publishing platform, so why another one?
+The world has plenty of CMS and blogging platforms, so why another one?
 
-**because Morpheus is the first [isomorphic](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/) open-source web publishing platform, and it's built with react and flux.**
+**because Morpheus is the first [universal](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/) open-source web publishing platform, and it's built with react and flux.**
 
 Checkout the source code [here](https://github.com/vesparny/morpheus).
 
 ### Reasons behind Morpheus
 
-At the time being, developers are building entire applications in the browser using JavaScript. The big part of the logic is living on the client and it talks to the server to an API.
+At the time being, developers build entire web applications using JavaScript. The big part of the logic lives the client and it generally communicates to the server via an API.
 
-Once the application is fully loaded, the user can gain a good experience navigating between pages without the need of fully reloading each time.
+Once the application is fully loaded, the user can gain a good experience navigating between pages without the need of fullpage reload.
 
-This is good, what happens when your website is run by a crawler (google bot or whatever)? If the website can only be executed on the client it won't be able to serve HTML to crawlers, and this will have negative impacts on SEO.
+This is good, but what happens when your website is run by a crawler (google bot or the likes)? If the website can only be executed on the client it won't be able to serve HTML to crawlers, and this will have negative impacts on SEO.
 
-This is why Morpheus is totally rendered on the server on the first load. Once done, React will attach events to the DOM, and the user will feel the benefits of a single page application, without having to wait for tedious spinners before seeing the content.
+This is why Morpheus is totally rendered on the server during the first load. Once done, React will attach events to the DOM, and the user will feel the benefits of a single page application, without having to wait for tedious spinners before seeing the content.
 
 THATS GREAT
 
 What happens if you disable JavaScript on your browser?
 
-Let's try, and this website will still work.
+Let's try, and this website will still work :)
 
 ### Features
 
-- Post and pages displaying, markdown render, posts pagination.
+- Post and pages rendering with markdown and posts pagination.
 - Server side rendering.
-- Comments managed with [Disqus](https://disqus.com/).
+- Commenting with [Disqus](https://disqus.com/).
 - Configurable permalinks.
 - Fully working default theme (it's called **blablabla**)
 
@@ -57,7 +57,7 @@ Morpheus is in its very early stages, and it isn’t pretty. **It is far from us
 
 It's very easy to get started with Morpheus, checkout the [README file](https://github.com/vesparny/morpheus#readme) for further details.
 
-My website is running with Morpheus and it's hosted on OpenShift, a more detailed post on how I deployed it will follow.
+My website is built with Morpheus and it's hosted on OpenShift, a more detailed post on how I deployed it will follow.
 
 Find below the Morpheus config file I'm using in production.
 
