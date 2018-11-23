@@ -3,8 +3,8 @@
 [https://arnodo.net](https://arnodo.net)
 
 [![Build Status](https://travis-ci.org/vesparny/site.svg)](https://travis-ci.org/vesparny/site)
-[![Dependency status](https://david-dm.org/vesparny/arnodo.net/site.svg)](https://david-dm.org/vesparny/site 'Dependency status')
-[![Dev dependency status](https://david-dm.org/vesparny/site/dev-status.svg)](https://david-dm.org/vesparny/sitw#info=devDependencies 'Dev dependency status')
+[![Dependency status](https://david-dm.org/vesparny/site.svg)](https://david-dm.org/vesparny/site 'Dependency status')
+[![Dev dependency status](https://david-dm.org/vesparny/site/dev-status.svg)](https://david-dm.org/vesparny/site#info=devDependencies 'Dev dependency status')
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
