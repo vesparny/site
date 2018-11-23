@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { withPrefix, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
@@ -20,7 +20,7 @@ const Blog = ({ data: { allMdx }, location }) => {
           borderBottom={0}
           fontWeight="normal">
           Alessandro Writing (
-          <P.Link display={'inline-block'} to={'/feed.xml'}>
+          <P.Link display={'inline-block'} to={withPrefix('/feed.xml')} isAsset>
             rss
           </P.Link>
           )
