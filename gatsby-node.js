@@ -63,6 +63,21 @@ const createPosts = (createPage, edges) => {
   })
 }
 
+const createRedirects = createRedirect => {
+  ;[
+    {
+      fromPath: '/2015/01/16/morpheus-is-moving-forward',
+      toPath: '/writing/2015/morpheus-is-moving-forward',
+      isPermanent: true
+    },
+    {
+      fromPath: '/2015/01/07/introducing-morpheus',
+      toPath: '/writing/2015/introducing-morpheus',
+      isPermanent: true
+    }
+  ].map(el => createRedirect(el))
+}
+
 const createWriting = (createPage, edges) => {
   const categories = pluckCategories(edges)
 
@@ -141,6 +156,7 @@ exports.createPages = ({ actions, graphql }) =>
     createWriting(actions.createPage, allEdges.writing)
     createPosts(actions.createPage, allEdges.writing)
     createCategoryPages(actions.createPage, allEdges.writing)
+    createRedirects(actions.createRedirect)
     return true
   })
 

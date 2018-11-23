@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "dev": "gatsby develop",
     "test": "npm run lint",
     "lint": "eslint .",
@@ -23,6 +24,7 @@
     "gatsby-plugin-catch-links": "^2.0.8",
     "gatsby-plugin-feed": "^2.0.9",
     "gatsby-plugin-manifest": "^2.0.10",
+    "gatsby-plugin-netlify": "^2.0.5",
     "gatsby-plugin-nprogress": "^2.0.6",
     "gatsby-plugin-offline": "^2.0.17",
     "gatsby-plugin-react-helmet": "^3.0.2",

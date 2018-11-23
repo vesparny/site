@@ -55,7 +55,7 @@ export const pageQuery = graphql`
             author
             avatarUrl
             twitter
-            date(formatString: "dddd, MMMM Do YYYY")
+            date(formatString: "MMMM DD, YYYY")
             categories
             keywords
           }
