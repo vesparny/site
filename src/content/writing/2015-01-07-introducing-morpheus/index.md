@@ -3,7 +3,7 @@ author: 'Alessandro Arnodo'
 twitter: 'vesparny'
 avatarUrl: 'https://s.gravatar.com/avatar/b191979120db1749f5f8c8cadc2ac4a9?s=24'
 date: '2015-01-07T15:49:16.408Z'
-title: 'Introuducing morpheus'
+title: 'Introducing morpheus'
 description: 'A gentle introduction to Morpheus, the very first isomorphic web publishing platform'
 categories: ['react']
 keywords: ['react']
