@@ -8,9 +8,13 @@ import * as P from '../components/primitives'
 import db from '../db'
 
 export default class Post extends Component {
-  state = {
-    viewsCount: null
+  constructor(props) {
+    super(props)
+    this.state = {
+      viewsCount: null
+    }
   }
+
   componentDidMount() {
     const { location } = this.props
     const page = encodeURIComponent(location.pathname)
