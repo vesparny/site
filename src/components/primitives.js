@@ -85,8 +85,8 @@ export const H1 = props => (
   <Text
     as="h1"
     fontSize={5}
-    m0={0}
-    p0={0}
+    m={0}
+    p={0}
     fontWeight="bold"
     color="mid-gray"
     {...props}

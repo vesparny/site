@@ -9,11 +9,7 @@ categories: ['react']
 keywords: ['react']
 ---
 
----
-
-** UPDATE: See the new features **
-
----
+> ** UPDATE: See the new features **
 
 The world has plenty of CMS and blogging platforms, so why another one?
 

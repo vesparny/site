@@ -40,7 +40,11 @@ export const Root = props => (
 
 export default class Layout extends Component {
   componentDidMount() {
-    // analytics here
+    const { location } = this.props
+    const page = encodeURIComponent(location.pathname)
+    window
+      .fetch('https://arnodonet-views.now.sh/?page=' + page)
+      .catch(err => console.error('view save error:', err.stack))
   }
   render() {
     const { children, location, showWritingLink } = this.props
