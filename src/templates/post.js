@@ -17,7 +17,9 @@ export default class Post extends Component {
 
   componentDidMount() {
     const { location } = this.props
-    const page = encodeURIComponent(location.pathname)
+    const page = encodeURIComponent(
+      location.pathname.substr(1).replace(/\//g, '--')
+    )
     db.collection('views')
       .doc(page)
       .onSnapshot(doc => {
@@ -71,17 +73,17 @@ export default class Post extends Component {
               </P.Text>
               {mdx.frontmatter.twitter && (
                 <Fragment>
-                  <P.Text color="silver" fontSize={2}>
+                  <P.Text color="silver" fontSize={1}>
                     {' ( '}
                   </P.Text>
                   <P.Box>
                     <P.A
                       href={`https://twitter.com/${mdx.frontmatter.twitter}`}
-                      fontSize={2}>
+                      fontSize={1}>
                       @{mdx.frontmatter.twitter}
                     </P.A>
                   </P.Box>
-                  <P.Text color="silver" fontSize={2}>
+                  <P.Text color="silver" fontSize={1}>
                     {' ) '}
                   </P.Text>
                 </Fragment>
