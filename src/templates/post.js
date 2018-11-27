@@ -17,9 +17,9 @@ export default class Post extends Component {
 
   componentDidMount() {
     const { location } = this.props
-    const page = encodeURIComponent(
-      location.pathname.substr(1).replace(/\//g, '--')
-    )
+    const page =
+      encodeURIComponent(location.pathname.substr(1).replace(/\//g, '--')) ||
+      'home'
     db.collection('views')
       .doc(page)
       .onSnapshot(doc => {

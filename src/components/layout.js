@@ -41,9 +41,9 @@ export const Root = props => (
 export default class Layout extends Component {
   componentDidMount() {
     const { location } = this.props
-    const page = encodeURIComponent(
-      location.pathname.substr(1).replace(/\//g, '--')
-    )
+    const page =
+      encodeURIComponent(location.pathname.substr(1).replace(/\//g, '--')) ||
+      'home'
     window
       .fetch('https://arnodonet-views.now.sh/?page=' + page)
       .catch(err => console.error('view save error:', err.stack))
