@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import * as P from '../components/primitives'
 import db from '../db'
+import { getPageIdForViewsCount } from '../utils'
 
 export default class Post extends Component {
   constructor(props) {
@@ -17,9 +18,7 @@ export default class Post extends Component {
 
   componentDidMount() {
     const { location } = this.props
-    const page =
-      encodeURIComponent(location.pathname.substr(1).replace(/\//g, '--')) ||
-      'home'
+    const page = getPageIdForViewsCount(location.pathname)
     db.collection('views')
       .doc(page)
       .onSnapshot(doc => {
