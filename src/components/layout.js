@@ -1,8 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { MDXProvider } from '@mdx-js/tag'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { getPageIdForViewsCount } from '../utils'
-
 import * as P from './primitives'
 import theme from '../theme'
 import Header from './header'
@@ -40,15 +38,6 @@ export const Root = props => (
 )
 
 export default class Layout extends Component {
-  componentDidMount() {
-    if (process.env.NODE_ENV !== 'development') {
-      const { location } = this.props
-      const page = getPageIdForViewsCount(location.pathname)
-      window
-        .fetch('https://arnodonet-views.now.sh/?page=' + page)
-        .catch(err => console.error('view save error:', err.stack))
-    }
-  }
   render() {
     const { children, location, showWritingLink } = this.props
     return (

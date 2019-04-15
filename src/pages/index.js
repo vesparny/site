@@ -50,9 +50,6 @@ export default ({ location }) => (
           <P.Link target="_blank" href="https://github.com/vesparny" mx={2}>
             code
           </P.Link>
-          <P.Link target="_blank" href="https://keybase.io/vesparny" mx={2}>
-            keybase
-          </P.Link>
         </P.Box>
       </P.Flex>
     </P.Flex>
