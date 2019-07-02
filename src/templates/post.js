@@ -5,30 +5,8 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import * as P from '../components/primitives'
-import db from '../db'
-import { getPageIdForViewsCount } from '../utils'
 
 export default class Post extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      viewsCount: null
-    }
-  }
-
-  componentDidMount() {
-    const { location } = this.props
-    const page = getPageIdForViewsCount(location.pathname)
-    db.collection('views')
-      .doc(page)
-      .onSnapshot(doc => {
-        if (doc.exists) {
-          this.setState({
-            viewsCount: doc.data().count || 0
-          })
-        }
-      })
-  }
   render() {
     const {
       data: { mdx },
@@ -53,7 +31,7 @@ export default class Post extends Component {
           }}>
           <P.H1 fontSize={[4, 5]}>{mdx.frontmatter.title}</P.H1>
           <P.Text fontSize={1} color="silver" mt={2}>
-            {mdx.frontmatter.date} - Views: {this.state.viewsCount}
+            {mdx.frontmatter.date}
           </P.Text>
           <P.Card mt={2} mb={4}>
             <P.Flex alignItems="center">
